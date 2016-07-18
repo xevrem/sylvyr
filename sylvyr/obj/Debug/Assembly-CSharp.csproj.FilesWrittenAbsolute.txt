@@ -1,0 +1,17 @@
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/UnityEngine.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/UnityEditor.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Mono.Cecil.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.DataContract.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/erika/repos/sylvyr/sylvyr/obj/Debug/Assembly-CSharp.dll
+/Users/erika/repos/sylvyr/sylvyr/obj/Debug/Assembly-CSharp.dll.mdb

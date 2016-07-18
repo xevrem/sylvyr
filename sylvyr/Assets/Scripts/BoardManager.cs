@@ -55,13 +55,31 @@ public class BoardManager : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-	
+	Vector3 random_position(){
+		int random_index = Random.Range (0, grid_positions.Count);
+		Vector3 random_position = grid_positions [random_index];
+		grid_positions.RemoveAt (random_index);
+		return random_position;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void layout_objects_at_random(GameObject[] tile_array, int min, int max){
+		int object_count = Random.Range (min, max + 1);	
+
+		for (int i = 0; i < object_count; i++) {
+			Vector3 random_pos = random_position ();
+			GameObject tile = tile_array[Random.Range (0, tile_array.Length)];
+			Instantiate (tile, random_pos, Quaternion.identity);
+
+		}
+	}
+
+	public void setup_scene(int level){
+		board_setup ();
+		initialize_list ();
+		layout_objects_at_random (wall_tiles, wall_count.minimum, wall_count.maximum);
+		layout_objects_at_random (food_tiles, food_count.minimum, food_count.maximum);
+		int enemy_count = (int)Math.Log (level, 2f);
+		layout_objects_at_random (enemy_tiles, enemy_count, enemy_count);
+		Instantiate(exit, new Vector3(columns -1, rows -1, 0f), Quaternion.identity);
 	}
 }
