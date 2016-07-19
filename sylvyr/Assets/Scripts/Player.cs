@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class Player : MovingObject {
 
@@ -8,6 +9,15 @@ public class Player : MovingObject {
     public int points_per_food = 10;
     public int points_per_soda = 20;
     public float restart_level_delay = 1f;
+	public Text food_text;
+
+	public AudioClip move_sound1;
+	public AudioClip move_sound2;
+	public AudioClip eat_sound1;
+	public AudioClip eat_sound2;
+	public AudioClip drink_sound1;
+	public AudioClip drink_sound2;
+	public AudioClip game_over_sound;
 
     private Animator animator;
     private int food;
@@ -16,6 +26,7 @@ public class Player : MovingObject {
     {
         animator.SetTrigger("player_hit");
         food -= loss;
+		food_text.text = "-" + loss + " Food: " + food;
         check_if_game_over();
     }
 
@@ -23,17 +34,22 @@ public class Player : MovingObject {
     protected override void Start () {
         animator = GetComponent<Animator>();
         food = GameManager.instance.player_food_points;
-
+		food_text.text = "Food: " + food;
         base.Start();
 	}
 
     protected override void attempt_move<T>(int xdir, int ydir)
     {
         food--;
+		food_text.text = "Food: " + food;
 
         base.attempt_move<T>(xdir, ydir);
 
         RaycastHit2D hit;
+
+		if (move (xdir, ydir, out hit)) {
+			SoundManager.instance.randomize_effects (move_sound1, move_sound2);
+		}
 
         check_if_game_over();
 
@@ -57,11 +73,15 @@ public class Player : MovingObject {
         else if (other.tag == "Food")
         {
             food += points_per_food;
+			food_text.text = "+" + points_per_food + " Food: " + food;
+			SoundManager.instance.randomize_effects (eat_sound1, eat_sound2);
             other.gameObject.SetActive(false);
         }
         else if (other.tag == "Soda")
         {
             food += points_per_soda;
+			food_text.text = "+"+ points_per_soda + " Food: " + food;
+			SoundManager.instance.randomize_effects (drink_sound1, drink_sound2);
             other.gameObject.SetActive(false);
         }
     }
@@ -80,6 +100,8 @@ public class Player : MovingObject {
     {
         if (food <= 0)
         {
+			SoundManager.instance.randomize_effects (game_over_sound);
+			SoundManager.instance.music_source.Stop ();
             GameManager.instance.game_over();
         }
     }

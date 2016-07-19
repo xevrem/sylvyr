@@ -6,6 +6,9 @@ public class Wall : MonoBehaviour {
 	public Sprite damage_sprite;
 	public int hp = 4;
 
+	public AudioClip chop_sound1;
+	public AudioClip chop_sound2;
+
 	private SpriteRenderer sprite_renderer;
 
 
@@ -15,6 +18,7 @@ public class Wall : MonoBehaviour {
 	}
 	
 	public void damage_wall(int loss){
+		SoundManager.instance.randomize_effects (chop_sound1, chop_sound2);
 		sprite_renderer.sprite = damage_sprite;
 		hp -= loss;
 
