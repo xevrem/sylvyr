@@ -3,12 +3,21 @@ using System.Collections;
 
 public class WorldController : MonoBehaviour {
 
+
+	public static WorldController instance{ get; protected set; }
+
 	public Sprite floor_sprite;
 
-	World world;
+	public World world{ get; protected set; }
+
+
 
 	// Use this for initialization
 	void Start () {
+		if (instance != null) {
+			Debug.LogError("duplicate world controllers...");
+		}
+		instance = this;
 
 		//create an empty world
 		world = new World ();
@@ -53,6 +62,13 @@ public class WorldController : MonoBehaviour {
 			Debug.Log ("on_tile_type_changed - error bad TileType");
 			break;
 		}
+	}
+
+	public Tile get_tile_at_world_coordinate(Vector3 coord){
+		int x = Mathf.FloorToInt (coord.x);
+		int y = Mathf.FloorToInt (coord.y);
+
+		return WorldController.instance.world.get_tile_at (x, y); 
 	}
 
 	// Update is called once per frame
