@@ -26,7 +26,13 @@ public class WorldController : MonoBehaviour {
 		ResourcePool.load_all ();
 
 		//create GameObject for each Tile
+		create_tiles();
 
+
+		world.randomize_tiles ();
+	}
+
+	void create_tiles(){
 		for (int x = 0; x < world.Width; x++) {
 			for (int y = 0; y < world.Height; y++) {
 				//get the tile at this location
@@ -44,10 +50,7 @@ public class WorldController : MonoBehaviour {
 				tile_data.on_tile_type_change += (tile) => { tile_type_change_handler(tile, tile_go);};
 			}
 		}
-
-		world.randomize_tiles ();
 	}
-		
 
 	//to be called when a Tile's TileType is changed
 	void tile_type_change_handler(Tile tile_data, GameObject tile_go){
