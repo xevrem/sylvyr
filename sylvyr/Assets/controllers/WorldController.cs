@@ -10,7 +10,7 @@ public class WorldController : MonoBehaviour {
 
 	public World world{ get; protected set; }
 
-
+	GameObject[] tile_game_objects;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +22,8 @@ public class WorldController : MonoBehaviour {
 		//create an empty world
 		world = new World ();
 
+		//pre-size tile_game_objects
+		tile_game_objects = new GameObject[world.Height*world.Width];
 
 		ResourcePool.load_all ();
 
@@ -33,10 +35,14 @@ public class WorldController : MonoBehaviour {
 	}
 
 	void create_tiles(){
+		int count = 0;
 		for (int x = 0; x < world.Width; x++) {
 			for (int y = 0; y < world.Height; y++) {
 				//get the tile at this location
 				Tile tile_data = world.get_tile_at (x, y);
+
+				//set id
+				tile_data.id = count;
 
 				//create the GO
 				GameObject tile_go = new GameObject ();
@@ -47,13 +53,21 @@ public class WorldController : MonoBehaviour {
 				//add a sprite renderer
 				tile_go.AddComponent<SpriteRenderer> ();
 
-				tile_data.on_tile_type_change += (tile) => { tile_type_change_handler(tile, tile_go);};
+				tile_game_objects [tile_data.id] = tile_go;
+
+				tile_data.on_tile_type_change += handle_tile_type_change;
+
+
+				count++;
 			}
 		}
 	}
 
 	//to be called when a Tile's TileType is changed
-	void tile_type_change_handler(Tile tile_data, GameObject tile_go){
+	void handle_tile_type_change(Tile tile_data){
+
+		GameObject tile_go = tile_game_objects [tile_data.id];
+
 		switch (tile_data.Type){
 		case TileType.FLOOR:
 			tile_go.GetComponent<SpriteRenderer> ().sprite = (Sprite) ResourcePool.Tile_Sprites [(int)TileType.FLOOR];
@@ -72,6 +86,18 @@ public class WorldController : MonoBehaviour {
 		int y = Mathf.FloorToInt (coord.y);
 
 		return WorldController.instance.world.get_tile_at (x, y); 
+	}
+
+	public void destroy_all_tile_game_objects(){
+		for (int x = 0; x < world.Width; x++) {
+			for (int y = 0; y < world.Height; y++) {
+				//get the tile at this location
+				Tile tile_data = world.get_tile_at (x, y);
+				tile_game_objects [tile_data.id] = null;
+				tile_data.on_tile_type_change -= handle_tile_type_change;
+			}
+		}
+
 	}
 
 	// Update is called once per frame

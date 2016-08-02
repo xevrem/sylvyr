@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class MouseController : MonoBehaviour {
 
@@ -7,10 +8,14 @@ public class MouseController : MonoBehaviour {
 	Vector3 curr_frame_position;
 	Vector3 drag_start_position;
 
+
 	List<GameObject> drag_cursors;
+	TileType build_mode_type = TileType.FLOOR;
 
 	public GameObject cursor_prefab;
 	public GameObject background;
+	public float min_orth_size = 3f;
+	public float max_orth_size = 15f;
 
 	// Use this for initialization
 	void Start () {
@@ -47,6 +52,12 @@ public class MouseController : MonoBehaviour {
 //	}
 
 	void update_dragging(){
+		//ignore if we've drug over a UI element
+		if (EventSystem.current.IsPointerOverGameObject()) {
+			return;
+		}
+
+
 		//start drag
 		if (Input.GetMouseButtonDown (0)) {
 			drag_start_position = curr_frame_position;
@@ -100,16 +111,7 @@ public class MouseController : MonoBehaviour {
 				for (int y = start_y; y <= end_y; y++) {
 					Tile t = WorldController.instance.world.get_tile_at (x, y);
 					if (t != null) {
-						switch (t.Type) {
-						case TileType.EMPTY:
-							t.Type = TileType.FLOOR;
-							break;
-						case TileType.FLOOR:
-							//t.Type = TileType.EMPTY;
-							break;
-						default:
-							break;
-						}
+						t.Type = build_mode_type;
 					}
 				}
 			}
@@ -124,17 +126,23 @@ public class MouseController : MonoBehaviour {
 			Camera.main.transform.Translate (diff);
 		}
 
+		//zoom or unzoom the camera
 		Camera.main.orthographicSize -= Camera.main.orthographicSize * Input.GetAxis ("Mouse ScrollWheel");
+		Camera.main.orthographicSize = Mathf.Clamp (Camera.main.orthographicSize, min_orth_size, max_orth_size);
 
-		Camera.main.orthographicSize = Mathf.Clamp (Camera.main.orthographicSize, 3f, 7f);
-
+		//adjust the background so it stays withing the camera at the proper scale
 		Vector3 cam_pos = Camera.main.transform.position;
 		background.transform.position = new Vector3 (cam_pos.x, cam_pos.y, 0f);
-		float scale = Camera.main.orthographicSize / 7f;
-<<<<<<< HEAD
-		background.transform.localScale = new Vector3 (scale, scale, 1);
-=======
-		background.transform.localScale = new Vector3 (scale, scale, 1f);
->>>>>>> 183d4cd342af4feb30312d473cadb10905549d7a
+		float scale = Camera.main.orthographicSize / max_orth_size;
+		background.transform.localScale = new Vector3 (3*scale, 3*scale, 1f);
+
+	}
+
+	public void set_mode_build_floor(){
+		build_mode_type = TileType.FLOOR;
+	}
+
+	public void set_mode_bulldoze_floor(){
+		build_mode_type = TileType.EMPTY;
 	}
 }

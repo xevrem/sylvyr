@@ -6,10 +6,15 @@ using System;
 public enum TileType { EMPTY = -1,
 					   FLOOR = 3};
 
+public delegate void tile_type_change_handler(Tile tile);
+
 public class Tile {
 
+	public int id{ get; set; }
+
 	TileType type = TileType.EMPTY;
-	public Action<Tile> on_tile_type_change;
+
+	public event tile_type_change_handler on_tile_type_change;
 
 	public TileType Type {
 		get {
