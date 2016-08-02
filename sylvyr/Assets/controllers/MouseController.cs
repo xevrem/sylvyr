@@ -131,6 +131,10 @@ public class MouseController : MonoBehaviour {
 		Vector3 cam_pos = Camera.main.transform.position;
 		background.transform.position = new Vector3 (cam_pos.x, cam_pos.y, 0f);
 		float scale = Camera.main.orthographicSize / 7f;
+<<<<<<< HEAD
 		background.transform.localScale = new Vector3 (scale, scale, 1);
+=======
+		background.transform.localScale = new Vector3 (scale, scale, 1f);
+>>>>>>> 183d4cd342af4feb30312d473cadb10905549d7a
 	}
 }
