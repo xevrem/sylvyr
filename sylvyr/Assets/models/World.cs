@@ -20,7 +20,10 @@ public class World {
 
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
-				tiles [x, y] = new Tile (this, x, y);
+				Tile tile = new Tile (this, x, y);
+				tile.id = x * height + y;
+				tiles [x, y] = tile;
+
 			}
 		}
 

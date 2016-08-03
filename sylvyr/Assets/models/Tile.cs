@@ -10,7 +10,9 @@ public delegate void tile_type_change_handler(Tile tile);
 
 public class Tile {
 
-	public int id{ get; set; }
+	private int _id = -1;
+
+	public int id{ get{return _id; } set{ _id = value; } }
 
 	TileType type = TileType.EMPTY;
 

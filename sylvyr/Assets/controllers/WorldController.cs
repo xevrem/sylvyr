@@ -41,9 +41,6 @@ public class WorldController : MonoBehaviour {
 				//get the tile at this location
 				Tile tile_data = world.get_tile_at (x, y);
 
-				//set id
-				tile_data.id = count;
-
 				//create the GO
 				GameObject tile_go = new GameObject ();
 				tile_go.name = "tile_" + x + "_" + y;
@@ -57,8 +54,6 @@ public class WorldController : MonoBehaviour {
 
 				tile_data.on_tile_type_change += handle_tile_type_change;
 
-
-				count++;
 			}
 		}
 	}
@@ -91,10 +86,19 @@ public class WorldController : MonoBehaviour {
 	public void destroy_all_tile_game_objects(){
 		for (int x = 0; x < world.Width; x++) {
 			for (int y = 0; y < world.Height; y++) {
-				//get the tile at this location
+
+				//get the tile and its associated GO at this location
 				Tile tile_data = world.get_tile_at (x, y);
+				GameObject go = tile_game_objects [tile_data.id];
+
+				//nullify the GO
 				tile_game_objects [tile_data.id] = null;
+
+				//de-register the handler
 				tile_data.on_tile_type_change -= handle_tile_type_change;
+
+				//destroy the GO
+				Destroy (go);
 			}
 		}
 
