@@ -143,19 +143,19 @@ public class WorldController : MonoBehaviour {
 		feature.on_feature_change += handle_feature_change;
 	}
 
-	//resolves all features to use appropriate sprite based on neighboring features
-	public void resolve_feature_tiles(){
-		//FIXME: should only resolve tiles in immediate vicinity
-		for (int i = 0; i < feature_game_objects.count; i++) {
-			GameObject go = feature_game_objects[i];
-			if (go == null)
-				continue;
-			Feature feature = world.get_feature_by_id (i);
-			int index = feature_neighbor_count (feature);
-			go.GetComponent<SpriteRenderer>().sprite = ResourcePool.get_proper_feature_sprite(feature.type, index);
-		}
-	}
-
+//	//resolves all features to use appropriate sprite based on neighboring features
+//	public void resolve_feature_tiles(){
+//		//FIXME: should only resolve tiles in immediate vicinity
+//		for (int i = 0; i < feature_game_objects.count; i++) {
+//			GameObject go = feature_game_objects[i];
+//			if (go == null)
+//				continue;
+//			Feature feature = world.get_feature_by_id (i);
+//			int index = feature_neighbor_count (feature);
+//			go.GetComponent<SpriteRenderer>().sprite = ResourcePool.get_proper_feature_sprite(feature.type, index);
+//		}
+//	}
+//
 	//gives the appropriate binary count of neighboring Features like the given Feature
 	int feature_neighbor_count(Feature feature){
 

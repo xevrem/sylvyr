@@ -66,7 +66,22 @@ public class Feature {
 			return null;
 		}
 
+		feature.trigger_neighbor_update (feature);
+
 		return feature;
+	}
+
+	void trigger_neighbor_update(Feature feature){
+		for (int x = -1; x <= 1; x++) {
+			for (int y = -1; y <= 1; y++) {
+				if (x == 0 && y == 0)
+					continue;
+				Feature feat = WorldController.instance.world.get_tile_at (feature.tile.X+x, feature.tile.Y+y).feature;
+				if (feat == null)
+					continue;
+				feat.on_feature_change (feat);
+			}
+		}
 	}
 
 }

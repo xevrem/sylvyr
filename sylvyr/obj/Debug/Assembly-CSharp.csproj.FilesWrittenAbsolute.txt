@@ -30,3 +30,6 @@
 /home/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Unity.CecilTools.dll
 /home/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /home/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/home/erika/repos/sylvyr/sylvyr/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/home/erika/repos/sylvyr/sylvyr/Temp/bin/Debug/Assembly-CSharp.dll

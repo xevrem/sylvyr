@@ -133,8 +133,8 @@ public class MouseController : MonoBehaviour {
 				}
 			}
 			//FIXME: should only resolve tiles in immediate vicinity and after each is placed
-			if(interaction_mode == InteractionMode.FEATURE)
-				WorldController.instance.resolve_feature_tiles ();
+			//if(interaction_mode == InteractionMode.FEATURE)
+			//	WorldController.instance.resolve_feature_tiles ();
 		}
 	}
 
