@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using System;
+
+public enum BuildMode{ TILES,
+						FEATURE}
 
 public class MouseController : MonoBehaviour {
 
@@ -8,9 +12,10 @@ public class MouseController : MonoBehaviour {
 	Vector3 curr_frame_position;
 	Vector3 drag_start_position;
 
-
+	BuildMode build_mode;
 	List<GameObject> drag_cursors;
-	TileType build_mode_type = TileType.FLOOR;
+	TileType build_tile_type = TileType.FLOOR;
+	FeatureType build_feature_type = FeatureType.WALL;
 
 	public GameObject cursor_prefab;
 	public GameObject background;
@@ -19,6 +24,7 @@ public class MouseController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		build_mode = BuildMode.TILES;
 		drag_cursors = new List<GameObject> ();
 	}
 	
@@ -111,11 +117,24 @@ public class MouseController : MonoBehaviour {
 				for (int y = start_y; y <= end_y; y++) {
 					Tile t = WorldController.instance.world.get_tile_at (x, y);
 					if (t != null) {
-						t.Type = build_mode_type;
+						switch (build_mode) {
+						case BuildMode.TILES:
+							//change the tile type
+							t.Type = build_tile_type;
+							break;
+						case BuildMode.FEATURE:
+							//create the build mode object
+							WorldController.instance.world.create_feature (t, build_feature_type);
+							break;
+						default:
+							break;
+						}
 					}
 				}
 			}
-
+			//FIXME: should only resolve tiles in immediate vicinity and after each is placed
+			if(build_mode == BuildMode.FEATURE)
+				WorldController.instance.resolve_feature_tiles ();
 		}
 	}
 
@@ -139,10 +158,17 @@ public class MouseController : MonoBehaviour {
 	}
 
 	public void set_mode_build_floor(){
-		build_mode_type = TileType.FLOOR;
+		build_mode = BuildMode.TILES;
+		build_tile_type = TileType.FLOOR;
 	}
 
 	public void set_mode_bulldoze_floor(){
-		build_mode_type = TileType.EMPTY;
+		build_mode = BuildMode.TILES;
+		build_tile_type = TileType.EMPTY;
+	}
+
+	public void set_mode_build_feature(string feature){
+		build_mode = BuildMode.FEATURE;
+		build_feature_type = (FeatureType) Enum.Parse(typeof(FeatureType),feature);
 	}
 }

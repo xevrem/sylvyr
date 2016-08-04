@@ -14,20 +14,66 @@ public static class ResourcePool {
 		}
 	}
 
-	static Object[] tile_sprites;
+	static Object[] _tile_sprites;
 
 	public static Object[] Tile_Sprites {
 		get {
-			return ResourcePool.tile_sprites;
+			return ResourcePool._tile_sprites;
+		}
+	}
+
+	static Object[] _wall_sprites;
+
+	public static Object[] wall_sprites{
+		get{
+			return ResourcePool._wall_sprites;
 		}
 	}
 
 	public static void load_all(){
-		ResourcePool.tile_sprites  = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/sprites/tiles.png"); 
-		Debug.Log (ResourcePool.tile_sprites.Length + " Tile Sprites loaded");
+		ResourcePool._tile_sprites  = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/sprites/tiles.png"); 
+		Debug.Log (ResourcePool._tile_sprites.Length + " Tile Sprites loaded");
+
+		process_walls ();
 
 		ResourcePool.creature_sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath ("Assets/sprites/creatures.png");
 		Debug.Log (ResourcePool.creature_sprites.Length + " Creture Sprites loaded");
+	}
+
+	public static Sprite get_proper_feature_sprite(FeatureType feature_type, int index){
+		switch (feature_type) {
+		case FeatureType.WALL:
+			return (Sprite) _wall_sprites [index];
+		default:
+			return (Sprite) _tile_sprites [3];
+		}
+	}
+
+	static void process_walls(){
+		//int start = 9;
+		//int finish = 24;
+		//int count = 0;
+		_wall_sprites = new Object[16];
+
+
+		_wall_sprites[0] = _tile_sprites[9];
+		_wall_sprites[1] = _tile_sprites[15];
+		_wall_sprites[2] = _tile_sprites[12];
+		_wall_sprites[3] = _tile_sprites[19];
+		_wall_sprites[4] = _tile_sprites[13];
+		_wall_sprites[5] = _tile_sprites[14];
+		_wall_sprites[6] = _tile_sprites[17];
+		_wall_sprites[7] = _tile_sprites[22];
+		_wall_sprites[8] = _tile_sprites[10];
+		_wall_sprites[9] = _tile_sprites[18];
+		_wall_sprites[10] = _tile_sprites[11];
+		_wall_sprites[11] = _tile_sprites[24];
+		_wall_sprites[12] = _tile_sprites[16];
+		_wall_sprites[13] = _tile_sprites[23];
+		_wall_sprites[14] = _tile_sprites[21];
+		_wall_sprites[15] = _tile_sprites[20];
+
+		
 	}
 
 	// You can avoid resizing of the Stack's internal array by

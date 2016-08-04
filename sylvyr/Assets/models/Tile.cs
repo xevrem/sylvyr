@@ -6,6 +6,9 @@ using System;
 public enum TileType { EMPTY = -1,
 					   FLOOR = 3};
 
+public enum TileObjectType{EMPTY= -1,
+						   WALL = 0}
+
 public delegate void tile_type_change_handler(Tile tile);
 
 public class Tile {
@@ -14,27 +17,31 @@ public class Tile {
 
 	public int id{ get{return _id; } set{ _id = value; } }
 
-	TileType type = TileType.EMPTY;
+
+	TileType _type = TileType.EMPTY;
 
 	public event tile_type_change_handler on_tile_type_change;
 
 	public TileType Type {
 		get {
-			return type;
+			return _type;
 		}
 		set {
-			TileType old_type = type;
-			type = value;
+			TileType old_type = _type;
+			_type = value;
 
-			if(on_tile_type_change != null && old_type != type)
+			if(on_tile_type_change != null && old_type != _type)
 				on_tile_type_change (this);
 		}
 	}
 
 	LooseObject loose_object;
-	InstsalledObject installed_object;
+	Feature _feature = null;
 
-	World world;
+	public Feature feature{ get{return _feature; } protected set{feature = value; }}
+
+
+	//World world;
 
 	int x;
 
@@ -53,8 +60,30 @@ public class Tile {
 	}
 
 	public Tile(World world, int x, int y){
-		this.world = world;
+		//this.world = world;
 		this.x = x;
 		this.y = y;
+	}
+
+	public bool install_feature(Feature feature){
+		if (feature == null) {
+			this._feature = null;
+			return true;
+		}
+
+		if (this._feature != null) {
+			Debug.LogError ("already existing feature: "+ feature.type.ToString());
+			return false;
+		}
+
+		this._feature = feature;
+		return true;
+	}
+
+	public bool has_feature(FeatureType feature_type){
+		if (this._feature == null)
+			return false;
+		
+		return this._feature.type == feature_type;
 	}
 }
