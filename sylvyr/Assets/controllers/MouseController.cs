@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public enum BuildMode{ TILES,
+public enum InteractionMode{ TILES,
 						FEATURE}
 
 public class MouseController : MonoBehaviour {
@@ -12,7 +12,7 @@ public class MouseController : MonoBehaviour {
 	Vector3 curr_frame_position;
 	Vector3 drag_start_position;
 
-	BuildMode build_mode;
+	InteractionMode interaction_mode;
 	List<GameObject> drag_cursors;
 	TileType build_tile_type = TileType.FLOOR;
 	FeatureType build_feature_type = FeatureType.WALL;
@@ -24,7 +24,7 @@ public class MouseController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		build_mode = BuildMode.TILES;
+		interaction_mode = InteractionMode.TILES;
 		drag_cursors = new List<GameObject> ();
 	}
 	
@@ -117,12 +117,12 @@ public class MouseController : MonoBehaviour {
 				for (int y = start_y; y <= end_y; y++) {
 					Tile t = WorldController.instance.world.get_tile_at (x, y);
 					if (t != null) {
-						switch (build_mode) {
-						case BuildMode.TILES:
+						switch (interaction_mode) {
+						case InteractionMode.TILES:
 							//change the tile type
 							t.Type = build_tile_type;
 							break;
-						case BuildMode.FEATURE:
+						case InteractionMode.FEATURE:
 							//create the build mode object
 							WorldController.instance.world.create_feature (t, build_feature_type);
 							break;
@@ -133,7 +133,7 @@ public class MouseController : MonoBehaviour {
 				}
 			}
 			//FIXME: should only resolve tiles in immediate vicinity and after each is placed
-			if(build_mode == BuildMode.FEATURE)
+			if(interaction_mode == InteractionMode.FEATURE)
 				WorldController.instance.resolve_feature_tiles ();
 		}
 	}
@@ -158,17 +158,17 @@ public class MouseController : MonoBehaviour {
 	}
 
 	public void set_mode_build_floor(){
-		build_mode = BuildMode.TILES;
+		interaction_mode = InteractionMode.TILES;
 		build_tile_type = TileType.FLOOR;
 	}
 
 	public void set_mode_bulldoze_floor(){
-		build_mode = BuildMode.TILES;
+		interaction_mode = InteractionMode.TILES;
 		build_tile_type = TileType.EMPTY;
 	}
 
 	public void set_mode_build_feature(string feature){
-		build_mode = BuildMode.FEATURE;
+		interaction_mode = InteractionMode.FEATURE;
 		build_feature_type = (FeatureType) Enum.Parse(typeof(FeatureType),feature);
 	}
 }

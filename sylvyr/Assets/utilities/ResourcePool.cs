@@ -6,38 +6,38 @@ using System.Collections.Generic;
 public static class ResourcePool {
 
 
-	static Object[] creature_sprites;
+	static Object[] _creature_sprites;
 
-	public static Object[] Creature_Sprites {
+	public static Object[] creature_sprites {
 		get {
-			return ResourcePool.creature_sprites;
+			return ResourcePool._creature_sprites;
 		}
 	}
 
-	static Object[] _tile_sprites;
+	static Sprite[] _tile_sprites;
 
-	public static Object[] Tile_Sprites {
+	public static Sprite[] tile_sprites {
 		get {
 			return ResourcePool._tile_sprites;
 		}
 	}
 
-	static Object[] _wall_sprites;
+	static Sprite[] _wall_sprites;
 
-	public static Object[] wall_sprites{
+	public static Sprite[] wall_sprites{
 		get{
 			return ResourcePool._wall_sprites;
 		}
 	}
 
 	public static void load_all(){
-		ResourcePool._tile_sprites  = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/sprites/tiles.png"); 
+		_tile_sprites = Resources.LoadAll<Sprite>("sprites/tiles");
 		Debug.Log (ResourcePool._tile_sprites.Length + " Tile Sprites loaded");
 
 		process_walls ();
 
-		ResourcePool.creature_sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath ("Assets/sprites/creatures.png");
-		Debug.Log (ResourcePool.creature_sprites.Length + " Creture Sprites loaded");
+		_creature_sprites = Resources.LoadAll<Sprite>("sprites/creatures");
+		Debug.Log (ResourcePool._creature_sprites.Length + " Creture Sprites loaded");
 	}
 
 	public static Sprite get_proper_feature_sprite(FeatureType feature_type, int index){
@@ -53,8 +53,7 @@ public static class ResourcePool {
 		//int start = 9;
 		//int finish = 24;
 		//int count = 0;
-		_wall_sprites = new Object[16];
-
+		_wall_sprites = new Sprite[16];
 
 		_wall_sprites[0] = _tile_sprites[9];
 		_wall_sprites[1] = _tile_sprites[15];
@@ -72,8 +71,6 @@ public static class ResourcePool {
 		_wall_sprites[13] = _tile_sprites[23];
 		_wall_sprites[14] = _tile_sprites[21];
 		_wall_sprites[15] = _tile_sprites[20];
-
-		
 	}
 
 	// You can avoid resizing of the Stack's internal array by

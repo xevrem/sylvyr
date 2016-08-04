@@ -71,7 +71,7 @@ public class WorldController : MonoBehaviour {
 
 		switch (tile_data.Type){
 		case TileType.FLOOR:
-			tile_go.GetComponent<SpriteRenderer> ().sprite = (Sprite) ResourcePool.Tile_Sprites [(int)TileType.FLOOR];
+			tile_go.GetComponent<SpriteRenderer> ().sprite = ResourcePool.tile_sprites [(int)TileType.FLOOR];
 			break;
 		case TileType.EMPTY:
 			tile_go.GetComponent<SpriteRenderer> ().sprite = null;

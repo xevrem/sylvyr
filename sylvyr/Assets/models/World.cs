@@ -86,7 +86,7 @@ public class World {
 
 		//check if feature cannot be placed
 		if (feature == null) {
-			Debug.LogError ("feature already exists on tile");
+			Debug.LogError ("a feature already exists on this tile");
 			return;
 		}
 
