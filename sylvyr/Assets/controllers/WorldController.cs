@@ -7,6 +7,7 @@ public class WorldController : MonoBehaviour {
 	public static WorldController instance{ get; protected set; }
 
 	public Sprite floor_sprite;
+	public Sprite empty_sprite;
 
 	public World world{ get; protected set; }
 
@@ -35,7 +36,7 @@ public class WorldController : MonoBehaviour {
 		//create GameObject for each Tile
 		create_tiles();
 
-		world.randomize_tiles ();
+		//world.randomize_tiles ();
 	}
 
 	void create_tiles(){
@@ -51,7 +52,7 @@ public class WorldController : MonoBehaviour {
 				tile_go.transform.SetParent (this.transform, true);
 
 				//add a sprite renderer
-				tile_go.AddComponent<SpriteRenderer> ();
+				tile_go.AddComponent<SpriteRenderer>().sprite = empty_sprite;
 				tile_go.GetComponent<SpriteRenderer>().sortingLayerName = "tiles";
 
 				tile_game_objects.set(tile_data.id, tile_go);
@@ -74,7 +75,7 @@ public class WorldController : MonoBehaviour {
 			tile_go.GetComponent<SpriteRenderer> ().sprite = ResourcePool.tile_sprites [(int)TileType.FLOOR];
 			break;
 		case TileType.EMPTY:
-			tile_go.GetComponent<SpriteRenderer> ().sprite = null;
+			tile_go.GetComponent<SpriteRenderer> ().sprite = empty_sprite;
 			break;
 		default:
 			Debug.Log ("on_tile_type_changed - error bad TileType");

@@ -892,11 +892,19 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 24
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: creatures_0
+    - serializedVersion: 2
+      name: creatures_0
       rect:
         serializedVersion: 2
         x: 24
@@ -907,7 +915,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_1
       rect:
         serializedVersion: 2
         x: 48
@@ -918,7 +928,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_2
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_2
       rect:
         serializedVersion: 2
         x: 72
@@ -929,7 +941,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_3
       rect:
         serializedVersion: 2
         x: 96
@@ -940,7 +954,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_4
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_4
       rect:
         serializedVersion: 2
         x: 120
@@ -951,7 +967,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_5
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_5
       rect:
         serializedVersion: 2
         x: 144
@@ -962,7 +980,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_6
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_6
       rect:
         serializedVersion: 2
         x: 168
@@ -973,7 +993,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_7
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_7
       rect:
         serializedVersion: 2
         x: 192
@@ -984,7 +1006,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_8
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_8
       rect:
         serializedVersion: 2
         x: 216
@@ -995,7 +1019,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_9
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_9
       rect:
         serializedVersion: 2
         x: 240
@@ -1006,7 +1032,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_10
       rect:
         serializedVersion: 2
         x: 264
@@ -1017,7 +1045,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_11
       rect:
         serializedVersion: 2
         x: 288
@@ -1028,7 +1058,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_12
       rect:
         serializedVersion: 2
         x: 312
@@ -1039,7 +1071,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_13
       rect:
         serializedVersion: 2
         x: 336
@@ -1050,7 +1084,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_14
       rect:
         serializedVersion: 2
         x: 360
@@ -1061,7 +1097,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_15
       rect:
         serializedVersion: 2
         x: 384
@@ -1072,7 +1110,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_16
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_16
       rect:
         serializedVersion: 2
         x: 408
@@ -1083,7 +1123,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_17
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_17
       rect:
         serializedVersion: 2
         x: 432
@@ -1094,7 +1136,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_18
       rect:
         serializedVersion: 2
         x: 24
@@ -1105,7 +1149,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_19
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_19
       rect:
         serializedVersion: 2
         x: 48
@@ -1116,7 +1162,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_20
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_20
       rect:
         serializedVersion: 2
         x: 72
@@ -1127,7 +1175,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_21
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_21
       rect:
         serializedVersion: 2
         x: 96
@@ -1138,7 +1188,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_22
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_22
       rect:
         serializedVersion: 2
         x: 120
@@ -1149,7 +1201,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_23
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_23
       rect:
         serializedVersion: 2
         x: 144
@@ -1160,7 +1214,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_24
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_24
       rect:
         serializedVersion: 2
         x: 168
@@ -1171,7 +1227,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_25
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_25
       rect:
         serializedVersion: 2
         x: 192
@@ -1182,7 +1240,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_26
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_26
       rect:
         serializedVersion: 2
         x: 216
@@ -1193,7 +1253,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_27
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_27
       rect:
         serializedVersion: 2
         x: 240
@@ -1204,7 +1266,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_28
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_28
       rect:
         serializedVersion: 2
         x: 264
@@ -1215,7 +1279,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_29
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_29
       rect:
         serializedVersion: 2
         x: 288
@@ -1226,7 +1292,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_30
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_30
       rect:
         serializedVersion: 2
         x: 312
@@ -1237,7 +1305,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_31
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_31
       rect:
         serializedVersion: 2
         x: 336
@@ -1248,7 +1318,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_32
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_32
       rect:
         serializedVersion: 2
         x: 360
@@ -1259,7 +1331,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_33
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_33
       rect:
         serializedVersion: 2
         x: 384
@@ -1270,7 +1344,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_34
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_34
       rect:
         serializedVersion: 2
         x: 408
@@ -1281,7 +1357,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_35
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_35
       rect:
         serializedVersion: 2
         x: 432
@@ -1292,7 +1370,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_36
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_36
       rect:
         serializedVersion: 2
         x: 24
@@ -1303,7 +1383,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_37
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_37
       rect:
         serializedVersion: 2
         x: 48
@@ -1314,7 +1396,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_38
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_38
       rect:
         serializedVersion: 2
         x: 72
@@ -1325,7 +1409,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_39
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_39
       rect:
         serializedVersion: 2
         x: 96
@@ -1336,7 +1422,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_40
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_40
       rect:
         serializedVersion: 2
         x: 120
@@ -1347,7 +1435,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_41
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_41
       rect:
         serializedVersion: 2
         x: 144
@@ -1358,7 +1448,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_42
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_42
       rect:
         serializedVersion: 2
         x: 168
@@ -1369,7 +1461,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_43
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_43
       rect:
         serializedVersion: 2
         x: 192
@@ -1380,7 +1474,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_44
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_44
       rect:
         serializedVersion: 2
         x: 216
@@ -1391,7 +1487,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_45
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_45
       rect:
         serializedVersion: 2
         x: 240
@@ -1402,7 +1500,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_46
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_46
       rect:
         serializedVersion: 2
         x: 264
@@ -1413,7 +1513,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_47
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_47
       rect:
         serializedVersion: 2
         x: 288
@@ -1424,7 +1526,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_48
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_48
       rect:
         serializedVersion: 2
         x: 312
@@ -1435,7 +1539,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_49
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_49
       rect:
         serializedVersion: 2
         x: 336
@@ -1446,7 +1552,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_50
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_50
       rect:
         serializedVersion: 2
         x: 360
@@ -1457,7 +1565,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_51
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_51
       rect:
         serializedVersion: 2
         x: 384
@@ -1468,7 +1578,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_52
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_52
       rect:
         serializedVersion: 2
         x: 408
@@ -1479,7 +1591,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_53
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_53
       rect:
         serializedVersion: 2
         x: 432
@@ -1490,7 +1604,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_54
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_54
       rect:
         serializedVersion: 2
         x: 24
@@ -1501,7 +1617,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_55
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_55
       rect:
         serializedVersion: 2
         x: 48
@@ -1512,7 +1630,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_56
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_56
       rect:
         serializedVersion: 2
         x: 72
@@ -1523,7 +1643,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_57
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_57
       rect:
         serializedVersion: 2
         x: 96
@@ -1534,7 +1656,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_58
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_58
       rect:
         serializedVersion: 2
         x: 120
@@ -1545,7 +1669,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_59
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_59
       rect:
         serializedVersion: 2
         x: 144
@@ -1556,7 +1682,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_60
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_60
       rect:
         serializedVersion: 2
         x: 168
@@ -1567,7 +1695,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_61
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_61
       rect:
         serializedVersion: 2
         x: 192
@@ -1578,7 +1708,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_62
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_62
       rect:
         serializedVersion: 2
         x: 216
@@ -1589,7 +1721,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_63
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_63
       rect:
         serializedVersion: 2
         x: 240
@@ -1600,7 +1734,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_64
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_64
       rect:
         serializedVersion: 2
         x: 264
@@ -1611,7 +1747,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_65
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_65
       rect:
         serializedVersion: 2
         x: 288
@@ -1622,7 +1760,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_66
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_66
       rect:
         serializedVersion: 2
         x: 312
@@ -1633,7 +1773,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_67
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_67
       rect:
         serializedVersion: 2
         x: 336
@@ -1644,7 +1786,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_68
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_68
       rect:
         serializedVersion: 2
         x: 360
@@ -1655,7 +1799,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_69
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_69
       rect:
         serializedVersion: 2
         x: 384
@@ -1666,7 +1812,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_70
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_70
       rect:
         serializedVersion: 2
         x: 408
@@ -1677,7 +1825,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_71
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_71
       rect:
         serializedVersion: 2
         x: 432
@@ -1688,7 +1838,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_72
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_72
       rect:
         serializedVersion: 2
         x: 24
@@ -1699,7 +1851,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_73
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_73
       rect:
         serializedVersion: 2
         x: 48
@@ -1710,7 +1864,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_74
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_74
       rect:
         serializedVersion: 2
         x: 72
@@ -1721,7 +1877,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_75
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_75
       rect:
         serializedVersion: 2
         x: 96
@@ -1732,7 +1890,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_76
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_76
       rect:
         serializedVersion: 2
         x: 120
@@ -1743,7 +1903,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_77
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_77
       rect:
         serializedVersion: 2
         x: 144
@@ -1754,7 +1916,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_78
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_78
       rect:
         serializedVersion: 2
         x: 168
@@ -1765,7 +1929,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_79
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_79
       rect:
         serializedVersion: 2
         x: 192
@@ -1776,7 +1942,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_80
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_80
       rect:
         serializedVersion: 2
         x: 216
@@ -1787,7 +1955,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_81
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_81
       rect:
         serializedVersion: 2
         x: 240
@@ -1798,7 +1968,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_82
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_82
       rect:
         serializedVersion: 2
         x: 264
@@ -1809,7 +1981,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_83
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_83
       rect:
         serializedVersion: 2
         x: 288
@@ -1820,7 +1994,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_84
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_84
       rect:
         serializedVersion: 2
         x: 312
@@ -1831,7 +2007,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_85
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_85
       rect:
         serializedVersion: 2
         x: 336
@@ -1842,7 +2020,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_86
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_86
       rect:
         serializedVersion: 2
         x: 360
@@ -1853,7 +2033,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_87
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_87
       rect:
         serializedVersion: 2
         x: 384
@@ -1864,7 +2046,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_88
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_88
       rect:
         serializedVersion: 2
         x: 408
@@ -1875,7 +2059,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_89
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_89
       rect:
         serializedVersion: 2
         x: 432
@@ -1886,7 +2072,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_90
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_90
       rect:
         serializedVersion: 2
         x: 24
@@ -1897,7 +2085,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_91
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_91
       rect:
         serializedVersion: 2
         x: 48
@@ -1908,7 +2098,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_92
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_92
       rect:
         serializedVersion: 2
         x: 72
@@ -1919,7 +2111,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_93
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_93
       rect:
         serializedVersion: 2
         x: 96
@@ -1930,7 +2124,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_94
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_94
       rect:
         serializedVersion: 2
         x: 120
@@ -1941,7 +2137,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_95
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_95
       rect:
         serializedVersion: 2
         x: 144
@@ -1952,7 +2150,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_96
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_96
       rect:
         serializedVersion: 2
         x: 168
@@ -1963,7 +2163,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_97
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_97
       rect:
         serializedVersion: 2
         x: 192
@@ -1974,7 +2176,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_98
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_98
       rect:
         serializedVersion: 2
         x: 216
@@ -1985,7 +2189,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_99
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_99
       rect:
         serializedVersion: 2
         x: 240
@@ -1996,7 +2202,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_100
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_100
       rect:
         serializedVersion: 2
         x: 264
@@ -2007,7 +2215,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_101
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_101
       rect:
         serializedVersion: 2
         x: 288
@@ -2018,7 +2228,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_102
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_102
       rect:
         serializedVersion: 2
         x: 312
@@ -2029,7 +2241,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_103
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_103
       rect:
         serializedVersion: 2
         x: 336
@@ -2040,7 +2254,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_104
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_104
       rect:
         serializedVersion: 2
         x: 360
@@ -2051,7 +2267,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_105
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_105
       rect:
         serializedVersion: 2
         x: 384
@@ -2062,7 +2280,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_106
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_106
       rect:
         serializedVersion: 2
         x: 408
@@ -2073,7 +2293,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_107
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_107
       rect:
         serializedVersion: 2
         x: 432
@@ -2084,7 +2306,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_108
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_108
       rect:
         serializedVersion: 2
         x: 24
@@ -2095,7 +2319,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_109
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_109
       rect:
         serializedVersion: 2
         x: 48
@@ -2106,7 +2332,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_110
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_110
       rect:
         serializedVersion: 2
         x: 72
@@ -2117,7 +2345,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_111
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_111
       rect:
         serializedVersion: 2
         x: 96
@@ -2128,7 +2358,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_112
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_112
       rect:
         serializedVersion: 2
         x: 120
@@ -2139,7 +2371,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_113
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_113
       rect:
         serializedVersion: 2
         x: 144
@@ -2150,7 +2384,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_114
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_114
       rect:
         serializedVersion: 2
         x: 168
@@ -2161,7 +2397,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_115
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_115
       rect:
         serializedVersion: 2
         x: 192
@@ -2172,7 +2410,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_116
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_116
       rect:
         serializedVersion: 2
         x: 216
@@ -2183,7 +2423,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_117
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_117
       rect:
         serializedVersion: 2
         x: 240
@@ -2194,7 +2436,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_118
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_118
       rect:
         serializedVersion: 2
         x: 264
@@ -2205,7 +2449,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_119
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_119
       rect:
         serializedVersion: 2
         x: 288
@@ -2216,7 +2462,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_120
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_120
       rect:
         serializedVersion: 2
         x: 312
@@ -2227,7 +2475,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_121
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_121
       rect:
         serializedVersion: 2
         x: 336
@@ -2238,7 +2488,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_122
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_122
       rect:
         serializedVersion: 2
         x: 360
@@ -2249,7 +2501,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_123
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_123
       rect:
         serializedVersion: 2
         x: 384
@@ -2260,7 +2514,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_124
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_124
       rect:
         serializedVersion: 2
         x: 408
@@ -2271,7 +2527,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_125
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_125
       rect:
         serializedVersion: 2
         x: 432
@@ -2282,7 +2540,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_126
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_126
       rect:
         serializedVersion: 2
         x: 24
@@ -2293,7 +2553,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_127
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_127
       rect:
         serializedVersion: 2
         x: 48
@@ -2304,7 +2566,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_128
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_128
       rect:
         serializedVersion: 2
         x: 72
@@ -2315,7 +2579,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_129
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_129
       rect:
         serializedVersion: 2
         x: 96
@@ -2326,7 +2592,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_130
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_130
       rect:
         serializedVersion: 2
         x: 120
@@ -2337,7 +2605,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_131
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_131
       rect:
         serializedVersion: 2
         x: 144
@@ -2348,7 +2618,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_132
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_132
       rect:
         serializedVersion: 2
         x: 168
@@ -2359,7 +2631,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_133
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_133
       rect:
         serializedVersion: 2
         x: 192
@@ -2370,7 +2644,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_134
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_134
       rect:
         serializedVersion: 2
         x: 216
@@ -2381,7 +2657,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_135
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_135
       rect:
         serializedVersion: 2
         x: 240
@@ -2392,7 +2670,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_136
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_136
       rect:
         serializedVersion: 2
         x: 264
@@ -2403,7 +2683,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_137
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_137
       rect:
         serializedVersion: 2
         x: 288
@@ -2414,7 +2696,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_138
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_138
       rect:
         serializedVersion: 2
         x: 312
@@ -2425,7 +2709,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_139
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_139
       rect:
         serializedVersion: 2
         x: 336
@@ -2436,7 +2722,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_140
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_140
       rect:
         serializedVersion: 2
         x: 360
@@ -2447,7 +2735,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_141
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_141
       rect:
         serializedVersion: 2
         x: 384
@@ -2458,7 +2748,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_142
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_142
       rect:
         serializedVersion: 2
         x: 408
@@ -2469,7 +2761,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_143
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_143
       rect:
         serializedVersion: 2
         x: 432
@@ -2480,7 +2774,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_144
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_144
       rect:
         serializedVersion: 2
         x: 24
@@ -2491,7 +2787,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_145
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_145
       rect:
         serializedVersion: 2
         x: 48
@@ -2502,7 +2800,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_146
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_146
       rect:
         serializedVersion: 2
         x: 72
@@ -2513,7 +2813,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_147
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_147
       rect:
         serializedVersion: 2
         x: 96
@@ -2524,7 +2826,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_148
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_148
       rect:
         serializedVersion: 2
         x: 120
@@ -2535,7 +2839,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_149
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_149
       rect:
         serializedVersion: 2
         x: 144
@@ -2546,7 +2852,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_150
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_150
       rect:
         serializedVersion: 2
         x: 168
@@ -2557,7 +2865,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_151
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_151
       rect:
         serializedVersion: 2
         x: 192
@@ -2568,7 +2878,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_152
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_152
       rect:
         serializedVersion: 2
         x: 216
@@ -2579,7 +2891,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_153
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_153
       rect:
         serializedVersion: 2
         x: 240
@@ -2590,7 +2904,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_154
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_154
       rect:
         serializedVersion: 2
         x: 264
@@ -2601,7 +2917,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_155
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_155
       rect:
         serializedVersion: 2
         x: 288
@@ -2612,7 +2930,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_156
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_156
       rect:
         serializedVersion: 2
         x: 312
@@ -2623,7 +2943,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_157
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_157
       rect:
         serializedVersion: 2
         x: 336
@@ -2634,7 +2956,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_158
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_158
       rect:
         serializedVersion: 2
         x: 360
@@ -2645,7 +2969,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_159
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_159
       rect:
         serializedVersion: 2
         x: 384
@@ -2656,7 +2982,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_160
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_160
       rect:
         serializedVersion: 2
         x: 408
@@ -2667,7 +2995,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_161
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_161
       rect:
         serializedVersion: 2
         x: 432
@@ -2678,7 +3008,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_162
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_162
       rect:
         serializedVersion: 2
         x: 24
@@ -2689,7 +3021,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_163
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_163
       rect:
         serializedVersion: 2
         x: 48
@@ -2700,7 +3034,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_164
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_164
       rect:
         serializedVersion: 2
         x: 72
@@ -2711,7 +3047,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_165
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_165
       rect:
         serializedVersion: 2
         x: 96
@@ -2722,7 +3060,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_166
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_166
       rect:
         serializedVersion: 2
         x: 120
@@ -2733,7 +3073,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_167
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_167
       rect:
         serializedVersion: 2
         x: 144
@@ -2744,7 +3086,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_168
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_168
       rect:
         serializedVersion: 2
         x: 168
@@ -2755,7 +3099,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_169
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_169
       rect:
         serializedVersion: 2
         x: 192
@@ -2766,7 +3112,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_170
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_170
       rect:
         serializedVersion: 2
         x: 216
@@ -2777,7 +3125,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_171
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_171
       rect:
         serializedVersion: 2
         x: 240
@@ -2788,7 +3138,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_172
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_172
       rect:
         serializedVersion: 2
         x: 264
@@ -2799,7 +3151,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_173
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_173
       rect:
         serializedVersion: 2
         x: 288
@@ -2810,7 +3164,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_174
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_174
       rect:
         serializedVersion: 2
         x: 312
@@ -2821,7 +3177,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_175
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_175
       rect:
         serializedVersion: 2
         x: 336
@@ -2832,7 +3190,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_176
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_176
       rect:
         serializedVersion: 2
         x: 360
@@ -2843,7 +3203,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_177
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_177
       rect:
         serializedVersion: 2
         x: 384
@@ -2854,7 +3216,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_178
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_178
       rect:
         serializedVersion: 2
         x: 408
@@ -2865,7 +3229,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_179
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_179
       rect:
         serializedVersion: 2
         x: 432
@@ -2876,7 +3242,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_180
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_180
       rect:
         serializedVersion: 2
         x: 24
@@ -2887,7 +3255,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_181
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_181
       rect:
         serializedVersion: 2
         x: 48
@@ -2898,7 +3268,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_182
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_182
       rect:
         serializedVersion: 2
         x: 72
@@ -2909,7 +3281,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_183
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_183
       rect:
         serializedVersion: 2
         x: 96
@@ -2920,7 +3294,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_184
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_184
       rect:
         serializedVersion: 2
         x: 120
@@ -2931,7 +3307,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_185
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_185
       rect:
         serializedVersion: 2
         x: 144
@@ -2942,7 +3320,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_186
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_186
       rect:
         serializedVersion: 2
         x: 168
@@ -2953,7 +3333,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_187
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_187
       rect:
         serializedVersion: 2
         x: 192
@@ -2964,7 +3346,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_188
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_188
       rect:
         serializedVersion: 2
         x: 216
@@ -2975,7 +3359,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_189
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_189
       rect:
         serializedVersion: 2
         x: 240
@@ -2986,7 +3372,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_190
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_190
       rect:
         serializedVersion: 2
         x: 264
@@ -2997,7 +3385,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_191
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_191
       rect:
         serializedVersion: 2
         x: 288
@@ -3008,7 +3398,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_192
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_192
       rect:
         serializedVersion: 2
         x: 312
@@ -3019,7 +3411,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_193
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_193
       rect:
         serializedVersion: 2
         x: 336
@@ -3030,7 +3424,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_194
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_194
       rect:
         serializedVersion: 2
         x: 360
@@ -3041,7 +3437,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_195
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_195
       rect:
         serializedVersion: 2
         x: 384
@@ -3052,7 +3450,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_196
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_196
       rect:
         serializedVersion: 2
         x: 408
@@ -3063,7 +3463,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_197
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_197
       rect:
         serializedVersion: 2
         x: 432
@@ -3074,7 +3476,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_198
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_198
       rect:
         serializedVersion: 2
         x: 24
@@ -3085,7 +3489,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_199
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_199
       rect:
         serializedVersion: 2
         x: 48
@@ -3096,7 +3502,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_200
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_200
       rect:
         serializedVersion: 2
         x: 72
@@ -3107,7 +3515,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_201
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_201
       rect:
         serializedVersion: 2
         x: 96
@@ -3118,7 +3528,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_202
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_202
       rect:
         serializedVersion: 2
         x: 120
@@ -3129,7 +3541,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_203
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_203
       rect:
         serializedVersion: 2
         x: 144
@@ -3140,7 +3554,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_204
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_204
       rect:
         serializedVersion: 2
         x: 168
@@ -3151,7 +3567,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_205
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_205
       rect:
         serializedVersion: 2
         x: 192
@@ -3162,7 +3580,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_206
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_206
       rect:
         serializedVersion: 2
         x: 216
@@ -3173,7 +3593,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_207
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_207
       rect:
         serializedVersion: 2
         x: 240
@@ -3184,7 +3606,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_208
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_208
       rect:
         serializedVersion: 2
         x: 264
@@ -3195,7 +3619,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_209
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_209
       rect:
         serializedVersion: 2
         x: 288
@@ -3206,7 +3632,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_210
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_210
       rect:
         serializedVersion: 2
         x: 312
@@ -3217,7 +3645,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_211
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_211
       rect:
         serializedVersion: 2
         x: 336
@@ -3228,7 +3658,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_212
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_212
       rect:
         serializedVersion: 2
         x: 360
@@ -3239,7 +3671,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_213
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_213
       rect:
         serializedVersion: 2
         x: 384
@@ -3250,7 +3684,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_214
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_214
       rect:
         serializedVersion: 2
         x: 408
@@ -3261,7 +3697,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_215
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_215
       rect:
         serializedVersion: 2
         x: 432
@@ -3272,7 +3710,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_216
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_216
       rect:
         serializedVersion: 2
         x: 24
@@ -3283,7 +3723,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_217
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_217
       rect:
         serializedVersion: 2
         x: 48
@@ -3294,7 +3736,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_218
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_218
       rect:
         serializedVersion: 2
         x: 72
@@ -3305,7 +3749,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_219
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_219
       rect:
         serializedVersion: 2
         x: 96
@@ -3316,7 +3762,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_220
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_220
       rect:
         serializedVersion: 2
         x: 120
@@ -3327,7 +3775,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_221
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_221
       rect:
         serializedVersion: 2
         x: 144
@@ -3338,7 +3788,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_222
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_222
       rect:
         serializedVersion: 2
         x: 168
@@ -3349,7 +3801,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_223
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_223
       rect:
         serializedVersion: 2
         x: 192
@@ -3360,7 +3814,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_224
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_224
       rect:
         serializedVersion: 2
         x: 216
@@ -3371,7 +3827,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_225
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_225
       rect:
         serializedVersion: 2
         x: 240
@@ -3382,7 +3840,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_226
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_226
       rect:
         serializedVersion: 2
         x: 264
@@ -3393,7 +3853,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_227
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_227
       rect:
         serializedVersion: 2
         x: 288
@@ -3404,7 +3866,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_228
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_228
       rect:
         serializedVersion: 2
         x: 312
@@ -3415,7 +3879,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_229
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_229
       rect:
         serializedVersion: 2
         x: 336
@@ -3426,7 +3892,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_230
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_230
       rect:
         serializedVersion: 2
         x: 360
@@ -3437,7 +3905,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_231
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_231
       rect:
         serializedVersion: 2
         x: 384
@@ -3448,7 +3918,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_232
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_232
       rect:
         serializedVersion: 2
         x: 408
@@ -3459,7 +3931,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_233
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_233
       rect:
         serializedVersion: 2
         x: 432
@@ -3470,7 +3944,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_234
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_234
       rect:
         serializedVersion: 2
         x: 24
@@ -3481,7 +3957,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_235
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_235
       rect:
         serializedVersion: 2
         x: 48
@@ -3492,7 +3970,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_236
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_236
       rect:
         serializedVersion: 2
         x: 72
@@ -3503,7 +3983,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_237
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_237
       rect:
         serializedVersion: 2
         x: 96
@@ -3514,7 +3996,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_238
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_238
       rect:
         serializedVersion: 2
         x: 120
@@ -3525,7 +4009,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_239
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_239
       rect:
         serializedVersion: 2
         x: 144
@@ -3536,7 +4022,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_240
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_240
       rect:
         serializedVersion: 2
         x: 168
@@ -3547,7 +4035,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_241
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_241
       rect:
         serializedVersion: 2
         x: 192
@@ -3558,7 +4048,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_242
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_242
       rect:
         serializedVersion: 2
         x: 216
@@ -3569,7 +4061,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_243
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_243
       rect:
         serializedVersion: 2
         x: 240
@@ -3580,7 +4074,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_244
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_244
       rect:
         serializedVersion: 2
         x: 264
@@ -3591,7 +4087,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_245
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_245
       rect:
         serializedVersion: 2
         x: 288
@@ -3602,7 +4100,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_246
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_246
       rect:
         serializedVersion: 2
         x: 312
@@ -3613,7 +4113,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_247
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_247
       rect:
         serializedVersion: 2
         x: 336
@@ -3624,7 +4126,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_248
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_248
       rect:
         serializedVersion: 2
         x: 360
@@ -3635,7 +4139,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_249
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_249
       rect:
         serializedVersion: 2
         x: 384
@@ -3646,7 +4152,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_250
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_250
       rect:
         serializedVersion: 2
         x: 408
@@ -3657,7 +4165,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_251
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_251
       rect:
         serializedVersion: 2
         x: 432
@@ -3668,7 +4178,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_252
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_252
       rect:
         serializedVersion: 2
         x: 24
@@ -3679,7 +4191,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_253
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_253
       rect:
         serializedVersion: 2
         x: 48
@@ -3690,7 +4204,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_254
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_254
       rect:
         serializedVersion: 2
         x: 72
@@ -3701,7 +4217,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_255
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_255
       rect:
         serializedVersion: 2
         x: 96
@@ -3712,7 +4230,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_256
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_256
       rect:
         serializedVersion: 2
         x: 120
@@ -3723,7 +4243,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_257
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_257
       rect:
         serializedVersion: 2
         x: 144
@@ -3734,7 +4256,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_258
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_258
       rect:
         serializedVersion: 2
         x: 168
@@ -3745,7 +4269,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_259
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_259
       rect:
         serializedVersion: 2
         x: 192
@@ -3756,7 +4282,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_260
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_260
       rect:
         serializedVersion: 2
         x: 216
@@ -3767,7 +4295,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_261
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_261
       rect:
         serializedVersion: 2
         x: 240
@@ -3778,7 +4308,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_262
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_262
       rect:
         serializedVersion: 2
         x: 264
@@ -3789,7 +4321,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_263
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_263
       rect:
         serializedVersion: 2
         x: 288
@@ -3800,7 +4334,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_264
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_264
       rect:
         serializedVersion: 2
         x: 312
@@ -3811,7 +4347,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_265
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_265
       rect:
         serializedVersion: 2
         x: 336
@@ -3822,7 +4360,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_266
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_266
       rect:
         serializedVersion: 2
         x: 360
@@ -3833,7 +4373,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_267
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_267
       rect:
         serializedVersion: 2
         x: 384
@@ -3844,7 +4386,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_268
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_268
       rect:
         serializedVersion: 2
         x: 408
@@ -3855,7 +4399,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_269
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_269
       rect:
         serializedVersion: 2
         x: 432
@@ -3866,7 +4412,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_270
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_270
       rect:
         serializedVersion: 2
         x: 24
@@ -3877,7 +4425,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_271
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_271
       rect:
         serializedVersion: 2
         x: 48
@@ -3888,7 +4438,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_272
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_272
       rect:
         serializedVersion: 2
         x: 72
@@ -3899,7 +4451,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_273
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_273
       rect:
         serializedVersion: 2
         x: 96
@@ -3910,7 +4464,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_274
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_274
       rect:
         serializedVersion: 2
         x: 120
@@ -3921,7 +4477,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_275
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_275
       rect:
         serializedVersion: 2
         x: 144
@@ -3932,7 +4490,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_276
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_276
       rect:
         serializedVersion: 2
         x: 168
@@ -3943,7 +4503,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_277
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_277
       rect:
         serializedVersion: 2
         x: 192
@@ -3954,7 +4516,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_278
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_278
       rect:
         serializedVersion: 2
         x: 216
@@ -3965,7 +4529,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_279
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_279
       rect:
         serializedVersion: 2
         x: 240
@@ -3976,7 +4542,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_280
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_280
       rect:
         serializedVersion: 2
         x: 264
@@ -3987,7 +4555,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_281
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_281
       rect:
         serializedVersion: 2
         x: 288
@@ -3998,7 +4568,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_282
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_282
       rect:
         serializedVersion: 2
         x: 312
@@ -4009,7 +4581,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_283
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_283
       rect:
         serializedVersion: 2
         x: 336
@@ -4020,7 +4594,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_284
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_284
       rect:
         serializedVersion: 2
         x: 360
@@ -4031,7 +4607,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_285
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_285
       rect:
         serializedVersion: 2
         x: 384
@@ -4042,7 +4620,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_286
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_286
       rect:
         serializedVersion: 2
         x: 408
@@ -4053,7 +4633,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_287
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_287
       rect:
         serializedVersion: 2
         x: 432
@@ -4064,7 +4646,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_288
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_288
       rect:
         serializedVersion: 2
         x: 24
@@ -4075,7 +4659,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_289
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_289
       rect:
         serializedVersion: 2
         x: 48
@@ -4086,7 +4672,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_290
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_290
       rect:
         serializedVersion: 2
         x: 72
@@ -4097,7 +4685,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_291
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_291
       rect:
         serializedVersion: 2
         x: 96
@@ -4108,7 +4698,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_292
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_292
       rect:
         serializedVersion: 2
         x: 120
@@ -4119,7 +4711,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_293
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_293
       rect:
         serializedVersion: 2
         x: 144
@@ -4130,7 +4724,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_294
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_294
       rect:
         serializedVersion: 2
         x: 168
@@ -4141,7 +4737,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_295
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_295
       rect:
         serializedVersion: 2
         x: 192
@@ -4152,7 +4750,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_296
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_296
       rect:
         serializedVersion: 2
         x: 216
@@ -4163,7 +4763,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_297
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_297
       rect:
         serializedVersion: 2
         x: 240
@@ -4174,7 +4776,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_298
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_298
       rect:
         serializedVersion: 2
         x: 264
@@ -4185,7 +4789,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_299
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_299
       rect:
         serializedVersion: 2
         x: 288
@@ -4196,7 +4802,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_300
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_300
       rect:
         serializedVersion: 2
         x: 312
@@ -4207,7 +4815,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_301
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_301
       rect:
         serializedVersion: 2
         x: 336
@@ -4218,7 +4828,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_302
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_302
       rect:
         serializedVersion: 2
         x: 360
@@ -4229,7 +4841,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_303
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_303
       rect:
         serializedVersion: 2
         x: 384
@@ -4240,7 +4854,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_304
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_304
       rect:
         serializedVersion: 2
         x: 408
@@ -4251,7 +4867,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_305
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_305
       rect:
         serializedVersion: 2
         x: 432
@@ -4262,7 +4880,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_306
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_306
       rect:
         serializedVersion: 2
         x: 24
@@ -4273,7 +4893,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_307
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_307
       rect:
         serializedVersion: 2
         x: 48
@@ -4284,7 +4906,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_308
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_308
       rect:
         serializedVersion: 2
         x: 72
@@ -4295,7 +4919,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_309
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_309
       rect:
         serializedVersion: 2
         x: 96
@@ -4306,7 +4932,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_310
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_310
       rect:
         serializedVersion: 2
         x: 120
@@ -4317,7 +4945,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_311
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_311
       rect:
         serializedVersion: 2
         x: 144
@@ -4328,7 +4958,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_312
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_312
       rect:
         serializedVersion: 2
         x: 168
@@ -4339,7 +4971,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_313
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_313
       rect:
         serializedVersion: 2
         x: 192
@@ -4350,7 +4984,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_314
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_314
       rect:
         serializedVersion: 2
         x: 216
@@ -4361,7 +4997,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_315
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_315
       rect:
         serializedVersion: 2
         x: 240
@@ -4372,7 +5010,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_316
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_316
       rect:
         serializedVersion: 2
         x: 264
@@ -4383,7 +5023,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_317
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_317
       rect:
         serializedVersion: 2
         x: 288
@@ -4394,7 +5036,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_318
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_318
       rect:
         serializedVersion: 2
         x: 312
@@ -4405,7 +5049,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_319
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_319
       rect:
         serializedVersion: 2
         x: 336
@@ -4416,7 +5062,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_320
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_320
       rect:
         serializedVersion: 2
         x: 360
@@ -4427,7 +5075,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_321
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_321
       rect:
         serializedVersion: 2
         x: 384
@@ -4438,7 +5088,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_322
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_322
       rect:
         serializedVersion: 2
         x: 408
@@ -4449,7 +5101,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_323
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_323
       rect:
         serializedVersion: 2
         x: 432
@@ -4460,7 +5114,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_324
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_324
       rect:
         serializedVersion: 2
         x: 24
@@ -4471,7 +5127,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_325
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_325
       rect:
         serializedVersion: 2
         x: 48
@@ -4482,7 +5140,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_326
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_326
       rect:
         serializedVersion: 2
         x: 72
@@ -4493,7 +5153,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_327
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_327
       rect:
         serializedVersion: 2
         x: 96
@@ -4504,7 +5166,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_328
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_328
       rect:
         serializedVersion: 2
         x: 120
@@ -4515,7 +5179,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_329
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_329
       rect:
         serializedVersion: 2
         x: 144
@@ -4526,7 +5192,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_330
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_330
       rect:
         serializedVersion: 2
         x: 168
@@ -4537,7 +5205,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_331
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_331
       rect:
         serializedVersion: 2
         x: 192
@@ -4548,7 +5218,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_332
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_332
       rect:
         serializedVersion: 2
         x: 216
@@ -4559,7 +5231,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_333
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_333
       rect:
         serializedVersion: 2
         x: 240
@@ -4570,7 +5244,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_334
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_334
       rect:
         serializedVersion: 2
         x: 264
@@ -4581,7 +5257,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_335
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_335
       rect:
         serializedVersion: 2
         x: 288
@@ -4592,7 +5270,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_336
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_336
       rect:
         serializedVersion: 2
         x: 312
@@ -4603,7 +5283,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_337
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_337
       rect:
         serializedVersion: 2
         x: 336
@@ -4614,7 +5296,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_338
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_338
       rect:
         serializedVersion: 2
         x: 360
@@ -4625,7 +5309,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_339
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_339
       rect:
         serializedVersion: 2
         x: 384
@@ -4636,7 +5322,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_340
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_340
       rect:
         serializedVersion: 2
         x: 408
@@ -4647,7 +5335,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_341
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_341
       rect:
         serializedVersion: 2
         x: 432
@@ -4658,7 +5348,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_342
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_342
       rect:
         serializedVersion: 2
         x: 24
@@ -4669,7 +5361,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_343
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_343
       rect:
         serializedVersion: 2
         x: 48
@@ -4680,7 +5374,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_344
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_344
       rect:
         serializedVersion: 2
         x: 72
@@ -4691,7 +5387,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_345
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_345
       rect:
         serializedVersion: 2
         x: 96
@@ -4702,7 +5400,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_346
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_346
       rect:
         serializedVersion: 2
         x: 120
@@ -4713,7 +5413,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_347
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_347
       rect:
         serializedVersion: 2
         x: 144
@@ -4724,7 +5426,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_348
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_348
       rect:
         serializedVersion: 2
         x: 168
@@ -4735,7 +5439,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_349
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_349
       rect:
         serializedVersion: 2
         x: 192
@@ -4746,7 +5452,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_350
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_350
       rect:
         serializedVersion: 2
         x: 216
@@ -4757,7 +5465,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_351
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_351
       rect:
         serializedVersion: 2
         x: 240
@@ -4768,7 +5478,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_352
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_352
       rect:
         serializedVersion: 2
         x: 264
@@ -4779,7 +5491,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_353
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_353
       rect:
         serializedVersion: 2
         x: 288
@@ -4790,7 +5504,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_354
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_354
       rect:
         serializedVersion: 2
         x: 312
@@ -4801,7 +5517,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_355
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_355
       rect:
         serializedVersion: 2
         x: 336
@@ -4812,7 +5530,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_356
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_356
       rect:
         serializedVersion: 2
         x: 360
@@ -4823,7 +5543,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_357
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_357
       rect:
         serializedVersion: 2
         x: 384
@@ -4834,7 +5556,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_358
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_358
       rect:
         serializedVersion: 2
         x: 408
@@ -4845,7 +5569,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_359
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_359
       rect:
         serializedVersion: 2
         x: 432
@@ -4856,7 +5582,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_360
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_360
       rect:
         serializedVersion: 2
         x: 24
@@ -4867,7 +5595,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_361
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_361
       rect:
         serializedVersion: 2
         x: 48
@@ -4878,7 +5608,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_362
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_362
       rect:
         serializedVersion: 2
         x: 72
@@ -4889,7 +5621,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_363
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_363
       rect:
         serializedVersion: 2
         x: 96
@@ -4900,7 +5634,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_364
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_364
       rect:
         serializedVersion: 2
         x: 120
@@ -4911,7 +5647,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_365
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_365
       rect:
         serializedVersion: 2
         x: 144
@@ -4922,7 +5660,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_366
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_366
       rect:
         serializedVersion: 2
         x: 168
@@ -4933,7 +5673,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_367
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_367
       rect:
         serializedVersion: 2
         x: 192
@@ -4944,7 +5686,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_368
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_368
       rect:
         serializedVersion: 2
         x: 216
@@ -4955,7 +5699,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_369
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_369
       rect:
         serializedVersion: 2
         x: 240
@@ -4966,7 +5712,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_370
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_370
       rect:
         serializedVersion: 2
         x: 264
@@ -4977,7 +5725,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_371
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_371
       rect:
         serializedVersion: 2
         x: 288
@@ -4988,7 +5738,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_372
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_372
       rect:
         serializedVersion: 2
         x: 312
@@ -4999,7 +5751,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_373
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_373
       rect:
         serializedVersion: 2
         x: 336
@@ -5010,7 +5764,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_374
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_374
       rect:
         serializedVersion: 2
         x: 360
@@ -5021,7 +5777,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_375
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_375
       rect:
         serializedVersion: 2
         x: 384
@@ -5032,7 +5790,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_376
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_376
       rect:
         serializedVersion: 2
         x: 408
@@ -5043,7 +5803,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_377
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_377
       rect:
         serializedVersion: 2
         x: 432
@@ -5054,7 +5816,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_378
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_378
       rect:
         serializedVersion: 2
         x: 24
@@ -5065,7 +5829,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_379
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_379
       rect:
         serializedVersion: 2
         x: 48
@@ -5076,7 +5842,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_380
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_380
       rect:
         serializedVersion: 2
         x: 72
@@ -5087,7 +5855,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_381
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_381
       rect:
         serializedVersion: 2
         x: 96
@@ -5098,7 +5868,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_382
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_382
       rect:
         serializedVersion: 2
         x: 120
@@ -5109,7 +5881,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_383
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_383
       rect:
         serializedVersion: 2
         x: 144
@@ -5120,7 +5894,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_384
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_384
       rect:
         serializedVersion: 2
         x: 168
@@ -5131,7 +5907,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_385
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_385
       rect:
         serializedVersion: 2
         x: 192
@@ -5142,7 +5920,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_386
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_386
       rect:
         serializedVersion: 2
         x: 216
@@ -5153,7 +5933,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_387
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_387
       rect:
         serializedVersion: 2
         x: 240
@@ -5164,7 +5946,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_388
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_388
       rect:
         serializedVersion: 2
         x: 264
@@ -5175,7 +5959,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_389
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_389
       rect:
         serializedVersion: 2
         x: 288
@@ -5186,7 +5972,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_390
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_390
       rect:
         serializedVersion: 2
         x: 312
@@ -5197,7 +5985,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_391
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_391
       rect:
         serializedVersion: 2
         x: 336
@@ -5208,7 +5998,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_392
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_392
       rect:
         serializedVersion: 2
         x: 360
@@ -5219,7 +6011,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_393
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_393
       rect:
         serializedVersion: 2
         x: 384
@@ -5230,7 +6024,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_394
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_394
       rect:
         serializedVersion: 2
         x: 408
@@ -5241,7 +6037,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_395
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_395
       rect:
         serializedVersion: 2
         x: 432
@@ -5252,7 +6050,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_396
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_396
       rect:
         serializedVersion: 2
         x: 24
@@ -5263,7 +6063,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_397
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_397
       rect:
         serializedVersion: 2
         x: 48
@@ -5274,7 +6076,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_398
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_398
       rect:
         serializedVersion: 2
         x: 72
@@ -5285,7 +6089,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_399
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_399
       rect:
         serializedVersion: 2
         x: 96
@@ -5296,7 +6102,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_400
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_400
       rect:
         serializedVersion: 2
         x: 120
@@ -5307,7 +6115,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_401
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_401
       rect:
         serializedVersion: 2
         x: 144
@@ -5318,7 +6128,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_402
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_402
       rect:
         serializedVersion: 2
         x: 360
@@ -5329,7 +6141,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_403
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_403
       rect:
         serializedVersion: 2
         x: 384
@@ -5340,7 +6154,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_404
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_404
       rect:
         serializedVersion: 2
         x: 24
@@ -5351,7 +6167,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_405
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_405
       rect:
         serializedVersion: 2
         x: 48
@@ -5362,7 +6180,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_406
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_406
       rect:
         serializedVersion: 2
         x: 72
@@ -5373,7 +6193,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_407
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_407
       rect:
         serializedVersion: 2
         x: 96
@@ -5384,7 +6206,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_408
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_408
       rect:
         serializedVersion: 2
         x: 120
@@ -5395,7 +6219,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_409
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_409
       rect:
         serializedVersion: 2
         x: 144
@@ -5406,7 +6232,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_410
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_410
       rect:
         serializedVersion: 2
         x: 168
@@ -5417,7 +6245,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_411
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_411
       rect:
         serializedVersion: 2
         x: 192
@@ -5428,7 +6258,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_412
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_412
       rect:
         serializedVersion: 2
         x: 216
@@ -5439,7 +6271,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_413
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_413
       rect:
         serializedVersion: 2
         x: 240
@@ -5450,7 +6284,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_414
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_414
       rect:
         serializedVersion: 2
         x: 264
@@ -5461,7 +6297,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_415
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_415
       rect:
         serializedVersion: 2
         x: 288
@@ -5472,7 +6310,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_416
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_416
       rect:
         serializedVersion: 2
         x: 336
@@ -5483,7 +6323,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_417
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_417
       rect:
         serializedVersion: 2
         x: 360
@@ -5494,7 +6336,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_418
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_418
       rect:
         serializedVersion: 2
         x: 384
@@ -5505,7 +6349,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_419
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_419
       rect:
         serializedVersion: 2
         x: 408
@@ -5516,7 +6362,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_420
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_420
       rect:
         serializedVersion: 2
         x: 432
@@ -5527,7 +6375,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_421
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_421
       rect:
         serializedVersion: 2
         x: 24
@@ -5538,7 +6388,9 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: creatures_422
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: creatures_422
       rect:
         serializedVersion: 2
         x: 48
@@ -5549,6 +6401,7 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 
