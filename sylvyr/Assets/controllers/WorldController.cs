@@ -37,6 +37,9 @@ public class WorldController : MonoBehaviour {
 		create_tiles();
 
 		//world.randomize_tiles ();
+
+		//center camera
+		center_camera();
 	}
 
 	void create_tiles(){
@@ -63,6 +66,9 @@ public class WorldController : MonoBehaviour {
 		}
 	}
 
+	void center_camera(){
+		Camera.main.transform.position = new Vector3 (world.Width / 2, world.Height / 2, Camera.main.transform.position.z);
+	}
 
 
 	//to be called when a Tile's TileType is changed

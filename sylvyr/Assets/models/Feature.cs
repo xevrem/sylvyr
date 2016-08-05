@@ -5,6 +5,7 @@ using System.Collections;
 public enum FeatureType {EMPTY=-1, WALL=0, DOOR, FURNATURE}
 
 public delegate void feature_change_handler(Feature feature);
+public delegate bool position_validation_handler(Tile tile);
 
 public class Feature {
 
@@ -15,6 +16,7 @@ public class Feature {
 	public Tile tile{ get; protected set;}
 
 	public event feature_change_handler on_feature_change;
+	public event position_validation_handler on_position_validation;
 
 	FeatureType _type;
 
@@ -33,30 +35,42 @@ public class Feature {
 	int width;
 	int height;
 
+	bool links_to_neighbor;
+
 
 	protected Feature(){
 	}
 
-	public static Feature create_prototype(FeatureType feature_type, float movement_cost=1f, int width=1, int height=1){
+	public static Feature create_prototype(FeatureType feature_type, float movement_cost=1f, int width=1, int height=1, bool links_to_neighbor=false){
 		Feature feature = new Feature (); 
 
 		feature._type = feature_type;
 		feature.movement_cost = movement_cost;
 		feature.width = width;
 		feature.height = height;
+		feature.links_to_neighbor = links_to_neighbor;
+
+		feature.on_position_validation = feature.is_placement_valid; 
 
 		return feature;
 	}
 
 	public static Feature place_feature(Feature proto, Tile tile){
+		if (proto.on_position_validation (tile) == false) {
+			Debug.LogError ("invalid position for feature");
+			return null; 
+		}
+
 		Feature feature = new Feature (); 
 
 		feature._type = proto._type;
 		feature.movement_cost = proto.movement_cost;
 		feature.width = proto.width;
 		feature.height = proto.height;
+		feature.links_to_neighbor = proto.links_to_neighbor;
 		feature.tile = tile;
 		feature.id = tile.id;
+
 
 		//FIXME: this assumes a 1x1 obj
 		if (tile.install_feature(feature) == false) {
@@ -82,6 +96,34 @@ public class Feature {
 				feat.on_feature_change (feat);
 			}
 		}
+	}
+
+
+	public bool is_placement_valid(Tile tile){
+		//check type
+		switch (tile.Type) {
+		case TileType.FLOOR:
+			break;
+		case TileType.EMPTY:
+			return false;
+			break;
+		default:
+			return false;
+			break;
+		}
+
+		if (tile.feature != null)
+			return false;
+
+
+		return true;
+	}
+
+	public bool is_door_placement_valid(Tile tile){
+		if (is_placement_valid (tile) == false)
+			return false;
+
+		return true;
 	}
 
 }
