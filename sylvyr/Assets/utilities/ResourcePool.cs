@@ -30,6 +30,8 @@ public static class ResourcePool {
 		}
 	}
 
+	static Dictionary<string, AudioClip> _audio_clips = new Dictionary<string, AudioClip>();
+
 	public static void load_all(){
 		_tile_sprites = Resources.LoadAll<Sprite>("sprites/tiles");
 		Debug.Log (ResourcePool._tile_sprites.Length + " Tile Sprites loaded");
@@ -38,6 +40,11 @@ public static class ResourcePool {
 
 		_creature_sprites = Resources.LoadAll<Sprite>("sprites/creatures");
 		Debug.Log (ResourcePool._creature_sprites.Length + " Creture Sprites loaded");
+
+		AudioClip[] clips = Resources.LoadAll<AudioClip> ("sounds");
+		foreach (AudioClip clip in clips) {
+			_audio_clips.Add (clip.name, clip);
+		}
 	}
 
 	public static Sprite get_proper_feature_sprite(FeatureType feature_type, int index){
@@ -71,6 +78,13 @@ public static class ResourcePool {
 		_wall_sprites[13] = _tile_sprites[23];
 		_wall_sprites[14] = _tile_sprites[21];
 		_wall_sprites[15] = _tile_sprites[20];
+	}
+
+	public static AudioClip get_audio_clip_by_name(string name){
+		if (_audio_clips.ContainsKey (name))
+			return _audio_clips [name];
+		else
+			return null;
 	}
 
 	// You can avoid resizing of the Stack's internal array by

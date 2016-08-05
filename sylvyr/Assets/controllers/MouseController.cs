@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public enum InteractionMode{ TILES,
-						FEATURE}
 
 public class MouseController : MonoBehaviour {
 
@@ -12,19 +10,15 @@ public class MouseController : MonoBehaviour {
 	Vector3 curr_frame_position;
 	Vector3 drag_start_position;
 
-	InteractionMode interaction_mode;
 	List<GameObject> drag_cursors;
-	TileType build_tile_type = TileType.FLOOR;
-	FeatureType build_feature_type = FeatureType.WALL;
 
 	public GameObject cursor_prefab;
-	public GameObject background;
+	//public GameObject background;
 	public float min_orth_size = 3f;
 	public float max_orth_size = 15f;
 
 	// Use this for initialization
 	void Start () {
-		interaction_mode = InteractionMode.TILES;
 		drag_cursors = new List<GameObject> ();
 	}
 	
@@ -40,23 +34,7 @@ public class MouseController : MonoBehaviour {
 		last_frame_position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		last_frame_position.z = 0;
 	}
-
-
-
-//	void update_cursor(){
-//		//update cursor position to the tile under the cursor
-//		Tile tile = WorldController.instance.get_tile_at_world_coordinate(curr_frame_position);
-//
-//		if(tile != null){
-//			Vector3 cursor_pos = new Vector3 (tile.X, tile.Y, 0);
-//			cursor_go.transform.position = cursor_pos;
-//			cursor_go.SetActive (true);
-//		}
-//		else{
-//			cursor_go.SetActive (false);
-//		}
-//	}
-
+		
 	void update_dragging(){
 		//ignore if we've drug over a UI element
 		if (EventSystem.current.IsPointerOverGameObject()) {
@@ -111,32 +89,22 @@ public class MouseController : MonoBehaviour {
 
 		//end drag
 		if (Input.GetMouseButtonUp (0)) {
-			
+			//get a copy of the BuildController
+			BuildController build_controller = GameObject.FindObjectOfType<BuildController> ();
+
 			//change tiles in dragged area
 			for (int x = start_x; x <= end_x; x++) {
 				for (int y = start_y; y <= end_y; y++) {
-					Tile t = WorldController.instance.world.get_tile_at (x, y);
-					if (t != null) {
-						switch (interaction_mode) {
-						case InteractionMode.TILES:
-							//change the tile type
-							t.Type = build_tile_type;
-							break;
-						case InteractionMode.FEATURE:
-							//create the build mode object
-							WorldController.instance.world.create_feature (t, build_feature_type);
-							break;
-						default:
-							break;
-						}
+					Tile tile = WorldController.instance.world.get_tile_at (x, y);
+					if (tile != null) {
+						//call build mode controller do_build
+						build_controller.do_build(tile);
 					}
 				}
 			}
-			//FIXME: should only resolve tiles in immediate vicinity and after each is placed
-			//if(interaction_mode == InteractionMode.FEATURE)
-			//	WorldController.instance.resolve_feature_tiles ();
 		}
 	}
+		
 
 	void update_camera_movement(){
 		//handle screend ragging
@@ -149,26 +117,11 @@ public class MouseController : MonoBehaviour {
 		Camera.main.orthographicSize -= Camera.main.orthographicSize * Input.GetAxis ("Mouse ScrollWheel");
 		Camera.main.orthographicSize = Mathf.Clamp (Camera.main.orthographicSize, min_orth_size, max_orth_size);
 
-		//adjust the background so it stays withing the camera at the proper scale
-		Vector3 cam_pos = Camera.main.transform.position;
-		background.transform.position = new Vector3 (cam_pos.x, cam_pos.y, 0f);
-		float scale = Camera.main.orthographicSize / max_orth_size;
-		background.transform.localScale = new Vector3 (3*scale, 3*scale, 1f);
-
-	}
-
-	public void set_mode_build_floor(){
-		interaction_mode = InteractionMode.TILES;
-		build_tile_type = TileType.FLOOR;
-	}
-
-	public void set_mode_bulldoze_floor(){
-		interaction_mode = InteractionMode.TILES;
-		build_tile_type = TileType.EMPTY;
-	}
-
-	public void set_mode_build_feature(string feature){
-		interaction_mode = InteractionMode.FEATURE;
-		build_feature_type = (FeatureType) Enum.Parse(typeof(FeatureType),feature);
+//		//adjust the background so it stays withing the camera at the proper scale
+//		Vector3 cam_pos = Camera.main.transform.position;
+//
+//		background.transform.position = new Vector3 (cam_pos.x, cam_pos.y, 0f);
+//		float scale = Camera.main.orthographicSize / max_orth_size;
+//		background.transform.localScale = new Vector3 (3*scale, 3*scale, 1f);
 	}
 }

@@ -4,7 +4,7 @@ using System.Collections;
 
 public enum FeatureType {EMPTY=-1, WALL=0, DOOR, FURNATURE}
 
-public delegate void feature_change_handler(Feature feature);
+public delegate void feature_changed_handler(Feature feature);
 public delegate bool position_validation_handler(Tile tile);
 
 public class Feature {
@@ -15,7 +15,7 @@ public class Feature {
 
 	public Tile tile{ get; protected set;}
 
-	public event feature_change_handler on_feature_change;
+	public event feature_changed_handler on_feature_changed;
 	public event position_validation_handler on_position_validation;
 
 	FeatureType _type;
@@ -25,8 +25,8 @@ public class Feature {
 		set{FeatureType old_type = _type;
 			_type = value;
 
-			if(on_feature_change != null && old_type != _type)
-				on_feature_change (this); }
+			if(on_feature_changed != null && old_type != _type)
+				on_feature_changed (this); }
 	}
 
 	//this is a speed multiplier
@@ -93,7 +93,7 @@ public class Feature {
 				Feature feat = WorldController.instance.world.get_tile_at (feature.tile.X+x, feature.tile.Y+y).feature;
 				if (feat == null)
 					continue;
-				feat.on_feature_change (feat);
+				feat.on_feature_changed (feat);
 			}
 		}
 	}
@@ -106,10 +106,8 @@ public class Feature {
 			break;
 		case TileType.EMPTY:
 			return false;
-			break;
 		default:
 			return false;
-			break;
 		}
 
 		if (tile.feature != null)

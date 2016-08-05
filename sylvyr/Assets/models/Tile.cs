@@ -9,7 +9,7 @@ public enum TileType { EMPTY = -1,
 public enum TileObjectType{EMPTY= -1,
 						   WALL = 0}
 
-public delegate void tile_type_change_handler(Tile tile);
+public delegate void tile_changed_handler(Tile tile);
 
 public class Tile {
 
@@ -20,7 +20,7 @@ public class Tile {
 
 	TileType _type = TileType.EMPTY;
 
-	public event tile_type_change_handler on_tile_type_change;
+	public event tile_changed_handler on_tile_changed;
 
 	public TileType Type {
 		get {
@@ -30,13 +30,16 @@ public class Tile {
 			TileType old_type = _type;
 			_type = value;
 
-			if(on_tile_type_change != null && old_type != _type)
-				on_tile_type_change (this);
+			if(on_tile_changed != null && old_type != _type)
+				on_tile_changed (this);
 		}
 	}
 
 	LooseObject loose_object;
 	Feature _feature = null;
+
+	//FIXME: this is a horrible idea...
+	public Job pending_job;
 
 	public Feature feature{ get{return _feature; } protected set{feature = value; }}
 

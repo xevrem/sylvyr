@@ -18,11 +18,19 @@ public class World {
 
 	public int Height { get{ return _height; } }
 
+	//FIXME: replace with a job controller later
+	public Queue<Job> job_queue;
+
 	public event feature_created_handler on_feature_created;
+	public event tile_changed_handler on_tile_changed;
 
 	public World(int width=100, int height=100){
 		this._width = 100;
 		this._height = 100;
+
+		create_feature_prototypes ();
+		//FIXME: may need to move/replace this to job controller later
+		this.job_queue = new Queue<Job> ();
 
 		this.tiles = new Tile[width, height];
 		this._features = new Bag<Feature> ();
@@ -31,14 +39,14 @@ public class World {
 			for (int y = 0; y < height; y++) {
 				Tile tile = new Tile (this, x, y);
 				tile.id = x * height + y;
-				tiles [x, y] = tile;
 
+				tile.on_tile_changed += handle_tile_type_change;
+
+				tiles [x, y] = tile;
 			}
 		}
 
 		Debug.Log ("World created with " + (width * height) + " tiles");
-
-		create_feature_prototypes ();
 	}
 
 	void create_feature_prototypes(){
@@ -99,5 +107,19 @@ public class World {
 	//returns the Feature given its ID
 	public Feature get_feature_by_id(int id){
 		return this._features [id];
+	}
+
+	void handle_tile_type_change(Tile tile){
+		if (on_tile_changed == null)
+			return;
+		
+		on_tile_changed (tile);
+	}
+
+	public bool is_feature_placement_valid(FeatureType feature_type, Tile tile){
+		if (feature_prototypes.ContainsKey (feature_type))
+			return feature_prototypes [feature_type].is_placement_valid (tile);
+		else
+			return false;
 	}
 }
