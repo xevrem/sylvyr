@@ -69,7 +69,7 @@ public class Feature {
 		feature.height = proto.height;
 		feature.links_to_neighbor = proto.links_to_neighbor;
 		feature.tile = tile;
-		feature.id = tile.id;
+		feature.id = WorldController.instance.world.feature_ids.next ();
 
 
 		//FIXME: this assumes a 1x1 obj

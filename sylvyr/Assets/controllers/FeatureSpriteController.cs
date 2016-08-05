@@ -44,28 +44,16 @@ public class FeatureSpriteController : MonoBehaviour {
 		feature_go.transform.SetParent (this.transform, true);
 
 		//add a sprite renderer
-		feature_go.AddComponent<SpriteRenderer> ();
-		feature_go.GetComponent<SpriteRenderer>().sortingLayerName = "features";
-		feature_go.GetComponent<SpriteRenderer> ().sprite = get_feature_sprite (feature);
+		SpriteRenderer sr = feature_go.AddComponent<SpriteRenderer> ();
+		sr.sortingLayerName = "features";
+		sr.sprite = get_feature_sprite (feature);
 
 		feature_game_objects.set (feature.id, feature_go);
 
 		feature.on_feature_changed += handle_feature_change;
 	}
 
-//	//resolves all features to use appropriate sprite based on neighboring features
-//	public void resolve_feature_tiles(){
-//		//FIXME: should only resolve tiles in immediate vicinity
-//		for (int i = 0; i < feature_game_objects.count; i++) {
-//			GameObject go = feature_game_objects[i];
-//			if (go == null)
-//				continue;
-//			Feature feature = world.get_feature_by_id (i);
-//			int index = feature_neighbor_count (feature);
-//			go.GetComponent<SpriteRenderer>().sprite = ResourcePool.get_proper_feature_sprite(feature.type, index);
-//		}
-//	}
-//
+
 	public static Sprite get_feature_sprite(Feature feature){
 		int index = feature_neighbor_count (feature);
 		return ResourcePool.get_proper_feature_sprite(feature.type, index);

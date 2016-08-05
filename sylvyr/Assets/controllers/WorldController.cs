@@ -25,6 +25,11 @@ public class WorldController : MonoBehaviour {
 		center_camera();
 	}
 
+	void Update(){
+		//TODO: add pause/unpause speed controlls, etc.
+		world.update (Time.deltaTime);
+	}
+
 	void center_camera(){
 		Camera.main.transform.position = new Vector3 (world.width / 2, world.height / 2, Camera.main.transform.position.z);
 	}

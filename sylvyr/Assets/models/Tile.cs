@@ -89,4 +89,27 @@ public class Tile {
 		
 		return this._feature.type == feature_type;
 	}
+
+
+	public bool is_neighbor(Tile tile, bool check_diagonal=false){
+		if (this.x == tile.x && (this.y == tile.y + 1 || this.y == tile.y - 1))
+			return true;
+
+		if (this.y == tile.y && (this.x == tile.x + 1 || this.x == tile.y - x))
+			return true;
+
+		if (check_diagonal) {
+			if (this.x == tile.x+1 && (this.y == tile.y + 1 || this.y == tile.y - 1))
+				return true;
+
+			if (this.x == tile.x-1 && (this.y == tile.y + 1 || this.y == tile.y - 1))
+				return true;
+		}
+
+		return false;
+	}
+
+	public Vector2 get_position2(){
+		return new Vector2 (this.x, this.y);
+	}
 }

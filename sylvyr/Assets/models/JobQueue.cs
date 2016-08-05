@@ -21,4 +21,11 @@ public class JobQueue {
 		if(on_job_created != null)
 			on_job_created (job);
 	}
+
+	public Job Dequeue(){
+		if (job_queue.Count == 0)
+			return null;
+		
+		return job_queue.Dequeue ();
+	}
 }

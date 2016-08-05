@@ -23,9 +23,9 @@ public class JobSpriteController : MonoBehaviour {
 
 		//add a sprite renderer
 		SpriteRenderer sr = job_go.AddComponent<SpriteRenderer>();
-		sr.sortingLayerName = "features";
+		sr.sortingLayerName = "jobs";
 		sr.sprite = FeatureSpriteController.get_basic_feature_sprite(job.feature_type);
-		sr.color = new Color (1f, 0.5f, 0.5f, 0.25f);
+		sr.color = new Color (0.5f, 1f, 0.5f, 0.25f);
 
 		job_game_objects.set (job.id, job_go);
 

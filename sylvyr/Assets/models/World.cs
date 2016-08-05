@@ -7,6 +7,7 @@ public class World {
 
 	Tile[,] tiles;
 	Bag<Feature> _features;
+	Bag<Character> _characters;
 
 	Dictionary<FeatureType, Feature> feature_prototypes;
 
@@ -15,8 +16,14 @@ public class World {
 
 	public JobQueue job_queue;
 
+	public IdGenerator tile_ids = new IdGenerator();
+	public IdGenerator feature_ids = new IdGenerator();
+	public IdGenerator job_ids = new IdGenerator();
+	public IdGenerator character_ids = new IdGenerator();
+
 	public event feature_created_handler on_feature_created;
 	public event tile_changed_handler on_tile_changed;
+	public event character_created_handler on_character_created;
 
 
 	public World(int width=100, int height=100){
@@ -33,7 +40,7 @@ public class World {
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
 				Tile tile = new Tile (this, x, y);
-				tile.id = x * height + y;
+				tile.id = tile_ids.next ();
 
 				tile.on_tile_changed += handle_tile_type_change;
 
@@ -41,7 +48,18 @@ public class World {
 			}
 		}
 
+		_characters = new Bag<Character> ();
+
+
 		Debug.Log ("World created with " + (width * height) + " tiles");
+	}
+
+	public void update(float delta_time){
+
+		for (int i = 0; i < _characters.count; i++) {
+			_characters[i].update (delta_time);
+		}
+
 	}
 
 	void create_feature_prototypes(){
@@ -118,5 +136,14 @@ public class World {
 			return false;
 	}
 
+	public Character create_character(Tile tile){
+		Character character = new Character (tile);
 
+		_characters.set (character.id, character);
+
+		if(on_character_created != null)
+			on_character_created (character);
+
+		return character;
+	}
 }

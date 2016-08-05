@@ -9,7 +9,7 @@ public class Job {
 	//holds info on a queued job to perform actions in the game
 	public int id;
 	public Tile tile { get; protected set; }
-	float job_time = 1f;
+	float job_time = 0.25f;
 
 	//FIXME: fix this...
 	public FeatureType feature_type;
@@ -17,9 +17,9 @@ public class Job {
 	public event job_complete_handler on_job_complete;
 	public event job_canceled_handler on_job_canceled;
 
-	public Job(Tile tile, FeatureType feature_type,  job_complete_handler complete_handler, float job_time=1f){
+	public Job(Tile tile, FeatureType feature_type, job_complete_handler complete_handler, float job_time=1f){
 		this.tile = tile;
-		this.id = tile.id;
+		this.id = WorldController.instance.world.job_ids.next();
 		this.feature_type = feature_type;
 		this.on_job_complete += complete_handler;
 	}
