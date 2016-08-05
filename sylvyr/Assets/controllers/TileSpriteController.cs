@@ -24,8 +24,8 @@ public class TileSpriteController : MonoBehaviour {
 	}
 
 	void create_tile_game_objects(){
-		for (int x = 0; x < world.Width; x++) {
-			for (int y = 0; y < world.Height; y++) {
+		for (int x = 0; x < world.width; x++) {
+			for (int y = 0; y < world.height; y++) {
 				//get the tile at this location
 				Tile tile_data = world.get_tile_at (x, y);
 
@@ -65,8 +65,8 @@ public class TileSpriteController : MonoBehaviour {
 
 
 	public void destroy_all_tile_game_objects(){
-		for (int x = 0; x < world.Width; x++) {
-			for (int y = 0; y < world.Height; y++) {
+		for (int x = 0; x < world.width; x++) {
+			for (int y = 0; y < world.height; y++) {
 
 				//get the tile and its associated GO at this location
 				Tile tile_data = world.get_tile_at (x, y);

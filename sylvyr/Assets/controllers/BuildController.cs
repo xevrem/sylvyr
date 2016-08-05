@@ -46,31 +46,33 @@ public class BuildController : MonoBehaviour {
 		case InteractionMode.FEATURE:
 			//can we even build the feature in the tile...
 			if (WorldController.instance.world.is_feature_placement_valid (build_feature_type, tile) == false
-				|| tile.pending_job != null)
+			    || tile.pending_job != null)
 				return;
 
-			//create the feature build job
-			FeatureType feature_type = build_feature_type;
-			Job job = new Job (tile, (the_job) => {
-				//on_feature_job_complete(type, the_job.tile);
-				WorldController.instance.world.create_feature (the_job.tile, feature_type);
-				the_job.tile.pending_job = null;
-			});
-
-			//FIXME: we shouldnt have to do this here, tiles should not be aware of jobs...
-			tile.pending_job = job;
-
-			//FIXME: arrrrrrrg this is dumb
-			job.on_job_canceled += (the_job) => {
-				the_job.tile.pending_job = null;
-			};
-
-			WorldController.instance.world.job_queue.Enqueue (job);
-			Debug.Log ("job queue size: " + WorldController.instance.world.job_queue.Count);
+			create_job (tile, build_feature_type);
 
 			break;
 		default:
 			break;
 		}
+	}
+
+	public void create_job(Tile tile, FeatureType feature_type){
+		//create the feature build job
+		Job job = new Job (tile, feature_type, (the_job) => {
+			WorldController.instance.world.create_feature (the_job.tile, feature_type);
+			the_job.tile.pending_job = null;
+		});
+
+		//FIXME: we shouldnt have to do this here, tiles should not be aware of jobs...
+		tile.pending_job = job;
+
+		//FIXME: arrrrrrrg this is dumb
+		job.on_job_canceled += (the_job) => {
+			the_job.tile.pending_job = null;
+		};
+
+		WorldController.instance.world.job_queue.Enqueue (job);
+		//Debug.Log ("job queue size: " + WorldController.instance.world.job_queue.Count);
 	}
 }

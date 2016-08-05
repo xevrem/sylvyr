@@ -26,7 +26,7 @@ public class WorldController : MonoBehaviour {
 	}
 
 	void center_camera(){
-		Camera.main.transform.position = new Vector3 (world.Width / 2, world.Height / 2, Camera.main.transform.position.z);
+		Camera.main.transform.position = new Vector3 (world.width / 2, world.height / 2, Camera.main.transform.position.z);
 	}
 
 	public Tile get_tile_at_world_coordinate(Vector3 coord){

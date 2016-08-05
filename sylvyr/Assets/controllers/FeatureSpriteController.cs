@@ -46,8 +46,7 @@ public class FeatureSpriteController : MonoBehaviour {
 		//add a sprite renderer
 		feature_go.AddComponent<SpriteRenderer> ();
 		feature_go.GetComponent<SpriteRenderer>().sortingLayerName = "features";
-		int index = feature_neighbor_count (feature);
-		feature_go.GetComponent<SpriteRenderer>().sprite = ResourcePool.get_proper_feature_sprite(feature.type, index);
+		feature_go.GetComponent<SpriteRenderer> ().sprite = get_feature_sprite (feature);
 
 		feature_game_objects.set (feature.id, feature_go);
 
@@ -67,8 +66,13 @@ public class FeatureSpriteController : MonoBehaviour {
 //		}
 //	}
 //
+	public static Sprite get_feature_sprite(Feature feature){
+		int index = feature_neighbor_count (feature);
+		return ResourcePool.get_proper_feature_sprite(feature.type, index);
+	}
+
 	//gives the appropriate binary count of neighboring Features like the given Feature
-	int feature_neighbor_count(Feature feature){
+	static int feature_neighbor_count(Feature feature){
 
 		int n = matching_neighbor (0, 1, feature) ? 1 : 0;
 		int w = matching_neighbor (-1, 0, feature) ? 2 : 0;
@@ -79,13 +83,22 @@ public class FeatureSpriteController : MonoBehaviour {
 	}
 
 	//tests if the offset tile has a matching feature
-	bool matching_neighbor(int x, int y, Feature feature){
-		Tile t = world.get_tile_at (feature.tile.X + x, feature.tile.Y + y);
+	static bool matching_neighbor(int x, int y, Feature feature){
+		Tile t = WorldController.instance.world.get_tile_at (feature.tile.X + x, feature.tile.Y + y);
 
 		if (t == null)
 			return false;
 
 		return t.has_feature (feature.type);
+	}
+
+	public static Sprite get_basic_feature_sprite(FeatureType feature_type){
+		switch (feature_type) {
+		case FeatureType.WALL:
+			return ResourcePool.tile_sprites [(int)feature_type];
+		default:
+			return null;
+		}
 	}
 
 }

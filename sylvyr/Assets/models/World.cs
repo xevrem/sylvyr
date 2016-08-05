@@ -10,27 +10,22 @@ public class World {
 
 	Dictionary<FeatureType, Feature> feature_prototypes;
 
-	private int _width;
+	public int width{ get; protected set; }
+	public int height{ get; protected set; }
 
-	public int Width { get{ return _width;} }
-
-	private int _height;
-
-	public int Height { get{ return _height; } }
-
-	//FIXME: replace with a job controller later
-	public Queue<Job> job_queue;
+	public JobQueue job_queue;
 
 	public event feature_created_handler on_feature_created;
 	public event tile_changed_handler on_tile_changed;
 
+
 	public World(int width=100, int height=100){
-		this._width = 100;
-		this._height = 100;
+		this.width = 100;
+		this.height = 100;
 
 		create_feature_prototypes ();
 		//FIXME: may need to move/replace this to job controller later
-		this.job_queue = new Queue<Job> ();
+		this.job_queue = new JobQueue ();
 
 		this.tiles = new Tile[width, height];
 		this._features = new Bag<Feature> ();
@@ -59,8 +54,8 @@ public class World {
 
 	//randomizes all tiles TileType
 	public void randomize_tiles(){
-		for (int x = 0; x < _width; x++) {
-			for (int y = 0; y < _height; y++) {
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
 				if (Random.Range (0, 2) == 0) {
 					tiles [x, y].Type = TileType.EMPTY;
 				} else {
@@ -72,7 +67,7 @@ public class World {
 
 	//retrieves the tile at the specified location
 	public Tile get_tile_at(int x, int y){
-		if (x > _width || x < 0 || y > _height || y < 0) {
+		if (x > width || x < 0 || y > height || y < 0) {
 			Debug.Log ("Tile (" +x+ "," +y+ ") is out of rance");
 			return null;
 		}
@@ -122,4 +117,6 @@ public class World {
 		else
 			return false;
 	}
+
+
 }
