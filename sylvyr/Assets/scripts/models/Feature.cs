@@ -30,7 +30,7 @@ public class Feature {
 	}
 
 	//this is a speed multiplier
-	float movement_cost;
+	public float movement_cost{get; protected set;}
 
 	int width;
 	int height;

@@ -75,4 +75,9 @@ public class BuildController : MonoBehaviour {
 		WorldController.instance.world.job_queue.Enqueue (job);
 		//Debug.Log ("job queue size: " + WorldController.instance.world.job_queue.Count);
 	}
+
+	public void do_pathfinding_test(){
+		WorldController.instance.world.build_pathfinding_test ();
+		PathTileGraph graph = WorldController.instance.world.get_tile_graph ();
+	}
 }

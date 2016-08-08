@@ -20,7 +20,7 @@ public class CharacterSpriteController : MonoBehaviour {
 
 		//FIXME: this is just for debugging... remove it.
 		Character c = world.create_character (world.get_tile_at (world.width / 2, world.height / 2));
-		c.set_destination(world.get_tile_at (c.currTile.X + 5, c.currTile.Y));
+		//c.set_destination(world.get_tile_at (c.currTile.X + 5, c.currTile.Y));
 	}
 	
 	// Update is called once per frame

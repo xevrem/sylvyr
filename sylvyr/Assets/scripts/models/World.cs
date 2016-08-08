@@ -11,6 +11,8 @@ public class World {
 
 	Dictionary<FeatureType, Feature> feature_prototypes;
 
+	PathTileGraph _tile_graph;
+
 	public int width{ get; protected set; }
 	public int height{ get; protected set; }
 
@@ -115,6 +117,8 @@ public class World {
 
 		if(on_feature_created != null)
 			on_feature_created (feature);
+
+		invalidate_tile_graph ();
 	}
 
 	//returns the Feature given its ID
@@ -122,11 +126,14 @@ public class World {
 		return this._features [id];
 	}
 
+	//called when any tile is changed
 	void handle_tile_type_change(Tile tile){
 		if (on_tile_changed == null)
 			return;
 		
 		on_tile_changed (tile);
+
+		invalidate_tile_graph ();
 	}
 
 	public bool is_feature_placement_valid(FeatureType feature_type, Tile tile){
@@ -145,5 +152,34 @@ public class World {
 			on_character_created (character);
 
 		return character;
+	}
+
+	public void build_pathfinding_test(){
+
+		int l = width / 2 - 5;
+		int b = height / 2 - 5;
+
+		for (int x = l - 5; x < l + 15; x++) {
+			for (int y = b - 5; y < b + 15; y++) {
+				tiles [x, y].Type = TileType.FLOOR;
+
+				if (x == l || x == (l + 9) || y == b || y == (b + 9)) {
+					if (x != (l + 9) & y != (b + 4))
+						create_feature (tiles [x, y], FeatureType.WALL);
+				}
+			}
+		}
+			
+	}
+
+	public void invalidate_tile_graph(){
+		this._tile_graph = null;
+	}
+
+	public PathTileGraph get_tile_graph(){
+		if(this._tile_graph == null)
+			this._tile_graph = new PathTileGraph(this);
+
+		return this._tile_graph;
 	}
 }
