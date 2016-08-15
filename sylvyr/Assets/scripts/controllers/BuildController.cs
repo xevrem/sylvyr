@@ -78,6 +78,6 @@ public class BuildController : MonoBehaviour {
 
 	public void do_pathfinding_test(){
 		WorldController.instance.world.build_pathfinding_test ();
-		PathTileGraph graph = WorldController.instance.world.get_tile_graph ();
+		//PathTileGraph graph = WorldController.instance.world.get_tile_graph ();
 	}
 }

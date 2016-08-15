@@ -12,25 +12,33 @@ public class PathAStar {
 		//all walkable nodes
 		PathTileGraph tile_graph = world.get_tile_graph ();
 
-		//ensure start end end tiles are in the graph
-		if (tile_graph.get_node_by_tile (start_tile) == null) {
-			Debug.LogError ("tile graph does not contail starting tile");
-		}
-
-		if (tile_graph.get_node_by_tile (end_tile) == null) {
-			Debug.LogError ("tile graph does not contail ending tile");
+		if (tile_graph == null) {
+			Debug.LogError ("the tile graph does not exist");
+			this.failed = true;
+			return;
 		}
 
 		PathNode<Tile> start_node = tile_graph.get_node_by_tile (start_tile);
 		PathNode<Tile> end_node = tile_graph.get_node_by_tile (end_tile);
+
+		//ensure start end end tiles are in the graph
+		if (start_node == null) {
+			Debug.LogError ("tile graph does not contain starting tile");
+			this.failed = true;
+			return;
+		}
+
+		if (end_node == null) {
+			this.failed = true;
+			Debug.LogError ("tile graph does not contain ending tile");
+			return;
+		}
 
 		List<PathNode<Tile>> closed_set = new List<PathNode<Tile>> ();
 		//List<PathNode<Tile>> open_set = new List<PathNode<Tile>> ();
 		BinaryHeap<PathNode<Tile>> open_set = new BinaryHeap<PathNode<Tile>>();
 
 		Dictionary<PathNode<Tile>, PathNode<Tile>> came_from = new Dictionary<PathNode<Tile>, PathNode<Tile>> ();
-
-
 
 		//set the base g-score for each node
 		Bag<float> g_scores = new Bag<float> ();
@@ -66,6 +74,7 @@ public class PathAStar {
 			HeapCell<PathNode<Tile>> current = open_set.remove_first ();
 
 			if (current.data.data == end_node.data) {
+				//we found the path, build it and return
 				reconstruct_path (came_from, end_node);
 				return;
 			}
@@ -73,6 +82,11 @@ public class PathAStar {
 			//add current to closed set
 			closed_set.Add (current.data);
 
+			if (current.data.edges == null) {
+				Debug.LogError ("PathAStar :: Bad Edges...");
+				continue;
+			}
+			
 			foreach (PathEdge<Tile> neighbor in current.data.edges) {
 				//continue if this edge is already in closed set
 				if (closed_set.Contains (neighbor.node) == true)
@@ -127,7 +141,7 @@ public class PathAStar {
 			return 1f;
 	}
 
-	private int heap_contains(PathNode<Tile> node, BinaryHeap<PathNode<Tile>> heap)
+	int heap_contains(PathNode<Tile> node, BinaryHeap<PathNode<Tile>> heap)
 	{
 		for (int i = 1; i < heap.size; i++)
 		{
@@ -139,8 +153,6 @@ public class PathAStar {
 	}
 
 	void reconstruct_path(Dictionary<PathNode<Tile>, PathNode<Tile>> came_from, PathNode<Tile> current){
-//		List<PathNode<Tile>> total_path = new List<PathNode<Tile>> ();
-//		total_path.Add (current);
 		Stack<PathNode<Tile>> total_path = new Stack<PathNode<Tile>>();
 		total_path.Push (current);
 

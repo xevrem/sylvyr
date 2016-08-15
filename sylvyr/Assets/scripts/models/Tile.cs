@@ -121,7 +121,7 @@ public class Tile {
 		return new Vector2 (this.x, this.y);
 	}
 
-	public List<Tile> get_neighbors(){//
+	public List<Tile> get_neighbors(bool check_diagonal=false){//
 		List<Tile> neighbors = new List<Tile> ();
 
 		for (int x = -1; x <= 1; x++) {
@@ -160,7 +160,13 @@ public class Tile {
 	public Tile get_closest_safe_neighbor(Tile destination, bool check_diagonal=false){
 		//get our safe neighbors
 		List<Tile> safe_tiles = destination.get_safe_neighbors (check_diagonal);
-		Tile closest = safe_tiles[0];//set it to first just in case
+
+		//are there any safe tiles?
+		if (safe_tiles.Count < 1)
+			return null;
+
+		//set it to first just in case
+		Tile closest = safe_tiles[0];
 		float min_dist = Mathf.Infinity;
 
 		//find the closest tile in the safe tiles

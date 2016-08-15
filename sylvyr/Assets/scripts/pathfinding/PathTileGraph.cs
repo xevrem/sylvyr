@@ -57,11 +57,20 @@ public class PathTileGraph {
 	}
 
 	public PathNode<Tile> get_node_by_tile(Tile tile){
-		return _nodes [tile.id];
+		if (_nodes == null || tile == null)
+			return null;
+
+		if (tile.id < _nodes.count)
+			return _nodes [tile.id];
+		else
+			return null;
 	}
 
 	public PathNode<Tile> get_node_by_id(int id){
-		return _nodes [id];
+		if (_nodes != null && id < _nodes.count)
+			return _nodes [id];
+		else
+			return null;
 	}
 
 	public int num_nodes(){
