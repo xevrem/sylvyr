@@ -62,6 +62,7 @@ public class Character {
 			break;
 		case CHARACTER_STATE.GRABBING_NODE:
 			get_node ();
+			do_movement (delta_time);//helps smooth out movement to do it once here.
 			break;
 		case CHARACTER_STATE.MOVING:
 			do_movement (delta_time);
