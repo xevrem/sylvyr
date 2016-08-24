@@ -1,16 +1,29 @@
 ﻿using System;
 using UnityEngine;
 
+public delegate void heading_changed_handler(Heading heading);
+
 public class Heading : IComponent
 {
+	private Vector2 _heading;
+	public Vector2 heading{
+		get{ return _heading; }
+		set{
+			if (_heading == value)
+				return;
+			_heading = value;
+			if (heading_changed != null)
+				heading_changed (this);
+		}
+	}
 
-	public Vector3 heading;
+	public event heading_changed_handler heading_changed;
 
 	public Heading ()
 	{
 	}
 
-	public Heading(Vector3 heading){
+	public Heading(Vector2 heading){
 		this.heading = heading;
 	}
 

@@ -7,8 +7,8 @@ public class Position : IComponent
 {
 	public event position_changed_handler position_changed;
 
-	private Vector3 _position;
-	public Vector3 position{ 
+	private Vector2 _position;
+	public Vector2 position{ 
 		get{ return _position; } 
 		set { 
 			if (_position == value)

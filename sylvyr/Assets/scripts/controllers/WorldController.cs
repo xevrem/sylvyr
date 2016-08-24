@@ -64,6 +64,8 @@ public class WorldController : MonoBehaviour {
 
 		//do system processing
 		control_system.process();
-
+		sprite_system.process ();
 	}
+
+
 }

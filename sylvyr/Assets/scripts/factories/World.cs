@@ -18,7 +18,7 @@ public class World {
 
 		ecs_instance.add_component(e, new SpriteData ("playerShip3_red", "character"));
 		ecs_instance.add_component (e, new Position (new Vector3 (0f,0f)));
-		ecs_instance.add_component (e, new Heading ());
+		ecs_instance.add_component (e, new Heading (Vector2.up));
 		ecs_instance.add_component (e, new Controllable ());
 
 		ecs_instance.tag_manager.tag_entity ("player", e);

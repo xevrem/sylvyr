@@ -24,16 +24,18 @@ public class ControlSystem : EntityProcessingSystem
 		Position position = position_mapper.get<Position> (entity);
 		Heading heading = heading_mapper.get<Heading> (entity);
 
-		if (Input.GetKey (KeyCode.UpArrow))
-			heading.heading += Vector3.up;
-		if (Input.GetKey (KeyCode.DownArrow))
-			heading.heading += Vector3.down;
-		if (Input.GetKey (KeyCode.LeftArrow))
-			heading.heading += Vector3.left;
-		if (Input.GetKey(KeyCode.RightArrow))
-			heading.heading += Vector3.right;
+		bool changed = false;
 
-		heading.heading.Normalize ();
+		if (Input.GetKey (KeyCode.UpArrow))
+			heading.heading += Vector2.up;
+		if (Input.GetKey (KeyCode.DownArrow))
+			heading.heading += Vector2.down;
+		if (Input.GetKey (KeyCode.LeftArrow))
+			heading.heading += VectorHelper.rotateVectorRadians (heading.heading, 0.1f);
+		if (Input.GetKey(KeyCode.RightArrow))
+			heading.heading += VectorHelper.rotateVectorRadians (heading.heading, -0.1f);
+
+		heading.heading.Normalize (); 
 
 		position.position += heading.heading * 0.1f;
 	}
