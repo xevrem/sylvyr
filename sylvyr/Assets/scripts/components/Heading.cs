@@ -5,8 +5,8 @@ public delegate void heading_changed_handler(Heading heading);
 
 public class Heading : IComponent
 {
-	private Vector2 _heading;
-	public Vector2 heading{
+	private Vector3 _heading;
+	public Vector3 heading{
 		get{ return _heading; }
 		set{
 			if (_heading == value)

@@ -26,7 +26,7 @@ public class ComponentMapper
 	private static ECSInstance ecs_instance;
 
 	private int _type_id;
-	private Type type;
+
 
 	public ComponentMapper ()
 	{
@@ -36,9 +36,12 @@ public class ComponentMapper
 
 	public ComponentMapper(IComponent component, ECSInstance instance){
 		this._type_id = component.type_id;
-		this.type = component.GetType ();
 		if (ecs_instance == null)
 			ComponentMapper.ecs_instance = instance;
+	}
+
+	public T get<T>(int entity_id) where T: IComponent{
+		return (T) ecs_instance.component_manager.components[this._type_id][entity_id];
 	}
 
 	public T get<T>(Entity entity) where T: IComponent{		

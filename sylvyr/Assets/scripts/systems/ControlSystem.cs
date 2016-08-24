@@ -4,7 +4,7 @@ using UnityEngine;
 public class ControlSystem : EntityProcessingSystem
 {
 
-	private ComponentMapper position_mapper;
+	private ComponentMapper go_mapper;
 	private ComponentMapper heading_mapper;
 
 	public ControlSystem ()
@@ -15,29 +15,45 @@ public class ControlSystem : EntityProcessingSystem
 
 	protected override void initialize ()
 	{
-		position_mapper = new ComponentMapper (new Position (), ecs_instance);
+		go_mapper = new ComponentMapper (new GOData (), ecs_instance);
 		heading_mapper = new ComponentMapper (new Heading (), ecs_instance);
 	}
 
 	protected override void process (Entity entity)
 	{
-		Position position = position_mapper.get<Position> (entity);
-		Heading heading = heading_mapper.get<Heading> (entity);
+		GOData go = go_mapper.get<GOData> (entity);
+		Heading h = heading_mapper.get<Heading> (entity);
 
-		bool changed = false;
+		bool update = false;
+		bool reverse = false;
 
-		if (Input.GetKey (KeyCode.UpArrow))
-			heading.heading += Vector2.up;
-		if (Input.GetKey (KeyCode.DownArrow))
-			heading.heading += Vector2.down;
-		if (Input.GetKey (KeyCode.LeftArrow))
-			heading.heading += VectorHelper.rotateVectorRadians (heading.heading, 0.1f);
-		if (Input.GetKey(KeyCode.RightArrow))
-			heading.heading += VectorHelper.rotateVectorRadians (heading.heading, -0.1f);
+		float turn_rate = 180f * ecs_instance.delta_time;
 
-		heading.heading.Normalize (); 
+		if (Input.GetKey (KeyCode.UpArrow)) {
+			//just continue in current direction
+			update = true;
+		}
+		if (Input.GetKey (KeyCode.DownArrow)) {
+			//toggle reverse flag
+			reverse = true;
+		}
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			go.game_object.transform.Rotate (Vector3.forward, turn_rate);
+			h.heading = VectorHelper.rotateVectorDegrees (h.heading, turn_rate).normalized;
+		}
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			go.game_object.transform.Rotate (Vector3.forward, -turn_rate);
+			h.heading = VectorHelper.rotateVectorDegrees (h.heading, -turn_rate).normalized;
+		}
 
-		position.position += heading.heading * 0.1f;
+		if (update) {
+			go.game_object.transform.position += h.heading * ecs_instance.delta_time * 5f;
+		} else if (reverse) {
+			go.game_object.transform.position += h.heading * ecs_instance.delta_time * -5f;
+		}
+
+
+			
 	}
 
 	#endregion
