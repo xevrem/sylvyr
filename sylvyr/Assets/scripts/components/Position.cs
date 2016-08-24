@@ -25,7 +25,7 @@ public class Position : IComponent
 	}
 
 	public Position(Vector3 position){
-		this.position = position;
+		_position = position;
 	}
 
 	#region IComponent implementation

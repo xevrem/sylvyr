@@ -8,7 +8,7 @@ public class WorldController : MonoBehaviour {
 	private ECSInstance ecs_instance;
 
 	private EntitySystem sprite_system;
-	private EntitySystem move_stuff_system;
+	private EntitySystem control_system;
 
 	private World world;
 
@@ -32,7 +32,7 @@ public class WorldController : MonoBehaviour {
 
 		//setup all systems
 		sprite_system = ecs_instance.system_manager.set_system(new SpriteSystem(), new SpriteData(), new Position());
-		move_stuff_system = ecs_instance.system_manager.set_system (new MoveStuffSystem (), new Position ());
+		control_system = ecs_instance.system_manager.set_system (new ControlSystem (), new Controllable(), new Position (), new Heading());
 
 		//initialize all systems
 		ecs_instance.system_manager.initialize_systems();
@@ -63,8 +63,7 @@ public class WorldController : MonoBehaviour {
 		ecs_instance.resolve_entities();
 
 		//do system processing
-		move_stuff_system.process();
-
+		control_system.process();
 
 	}
 }

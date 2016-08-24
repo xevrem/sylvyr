@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using UnityEngine;
 
 public class ComponentManager
 {
@@ -33,16 +34,19 @@ public class ComponentManager
 	}
 
 	public void register_component_type(IComponent component){
-		if (component.type_id == 0) {
-			component.type_id = _next_type_id++;
-		}
+		if (component.type_id != 0)
+			return;//already registered
+		
+		component.type_id = _next_type_id++;
+
 		if (component.type_id < components.capacity) {
 			if (this.components [component.type_id] == null) {
 				this.components [component.type_id] = new Bag<IComponent> ();
 			}
 		} else {
 			//already no null test required, add the new bag
-			this.components [component.type_id] = new Bag<IComponent> ();
+			this.components.set(component.type_id, new Bag<IComponent>());
+			//this.components [component.type_id] = new Bag<IComponent> ();
 		}
 	}
 

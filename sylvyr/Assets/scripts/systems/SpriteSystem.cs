@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpriteSystem : EntityProcessingSystem {
 
-	private Bag<GameObject> game_objects;
+	private Bag<GameObject> game_objects = new Bag<GameObject>();
 	private ComponentMapper sprite_mapper;
 	private ComponentMapper position_mapper;
 
@@ -18,7 +18,7 @@ public class SpriteSystem : EntityProcessingSystem {
 
 	protected override void added (Entity entity)
 	{
-		Debug.Log ("added entity: "+entity.id);
+		//Debug.Log ("added entity: "+entity.id);
 		SpriteData sprite_data = sprite_mapper.get<SpriteData> (entity);
 		GameObject sprite_go = new GameObject ();
 		sprite_go.name = sprite_data.id.ToString();

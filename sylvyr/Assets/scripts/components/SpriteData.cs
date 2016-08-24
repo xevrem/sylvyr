@@ -2,19 +2,30 @@
 using System.Collections;
 
 
-public delegate void sprite_changed_handler(SpriteData ship);
+public delegate void sprite_changed_handler(SpriteData sprite);
 
 public class SpriteData : IComponent {
 
 	//public  GameObject game_object;
-
-	public string asset_name;
+	private string _asset_name;
+	public string asset_name{
+		get{ return _asset_name; }
+		set{
+			if (_asset_name == value)
+				return;
+			_asset_name = value;
+			if(sprite_changed != null)
+				sprite_changed (this);
+		}
+	}
 	public string layer_name;
+
+	public event sprite_changed_handler sprite_changed;
 
 	public SpriteData(){}
 
 	public SpriteData(string asset_name, string layer){
-		this.asset_name = asset_name;
+		this._asset_name = asset_name;
 		this.layer_name = layer;
 	}
 

@@ -9,7 +9,7 @@ public class MoveStuffSystem : EntityProcessingSystem {
 
 	protected override void added (Entity entity)
 	{
-		Debug.Log ("added an entity...");
+		Debug.Log ("added an entity..." + this._entities.count);
 	}
 
 	protected override void initialize ()
@@ -19,9 +19,9 @@ public class MoveStuffSystem : EntityProcessingSystem {
 
 	protected override void process (Entity entity)
 	{
-		Debug.Log ("moving stuff");
+		//Debug.Log ("moving stuff");
 		Position p = position_mapper.get<Position> (entity);
-		p.position += Vector3.MoveTowards(p.position, new Vector3(25f,25f), 0.1f);
+		p.position = Vector3.MoveTowards(p.position, new Vector3(25f,25f), 0.1f);
 	}
 
 	#endregion
