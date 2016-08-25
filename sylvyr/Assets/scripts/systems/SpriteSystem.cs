@@ -25,7 +25,8 @@ public class SpriteSystem : EntityProcessingSystem {
 
 		GOData go_data = position_mapper.get<GOData> (entity);
 
-		go_data.game_object.name = sprite_data.id.ToString();
+		go_data.game_object.name = sprite_data.owner_id.ToString();
+		go_data.game_object.transform.SetParent (WorldController.instance.transform,true);
 
 		SpriteRenderer sr = go_data.game_object.AddComponent<SpriteRenderer> ();
 		sr.sortingLayerName = sprite_data.layer_name;

@@ -38,7 +38,7 @@ public class FollowSystem : EntityProcessingSystem
 		Heading h = heading_mapper.get<Heading> (entity);
 
 		//set a default turn rate
-		float turn_rate = 90f * ecs_instance.delta_time;
+		float turn_rate = 180f * ecs_instance.delta_time;
 
 		//determine if the angle is positive or negative
 		if ( VectorHelper.getSignedAngle (h.heading,
@@ -53,7 +53,7 @@ public class FollowSystem : EntityProcessingSystem
 
 		h.heading.Normalize ();
 
-		go.game_object.transform.position += h.heading * ecs_instance.delta_time * 2f;
+		go.game_object.transform.position += h.heading * ecs_instance.delta_time * 4f;
 
 	}
 	#endregion

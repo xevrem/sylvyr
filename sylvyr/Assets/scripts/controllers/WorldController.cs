@@ -47,9 +47,18 @@ public class WorldController : MonoBehaviour {
 
 		//create any inital entities here
 		Entity player = world.create_ship();
-		Entity ship1 = world.create_follower (new Vector3(5f,5f), player);
-		Entity ship2 = world.create_follower (new Vector3(-5f,-5f), ship1);
-		world.create_follower (new Vector3(5f,-5f), ship2);
+		for (int i = 0; i < 5000; i++) {
+			world.create_follower (new Vector3(Random.Range(-5f,5f),Random.Range(-5f,5f)), player);
+		}
+
+//		world.create_follower (new Vector3(5f,5f), player);
+//		world.create_follower (new Vector3(-5f,-5f), player);
+//		world.create_follower (new Vector3(5f,-5f), player);
+//		world.create_follower (new Vector3(1f,-5f), player);
+//		world.create_follower (new Vector3(2f,-5f), player);
+//		world.create_follower (new Vector3(5f,-1f), player);
+//		world.create_follower (new Vector3(5f,-2f), player);
+//		world.create_follower (new Vector3(5f,-3f), player);
 
 		//early entity reslove
 		ecs_instance.resolve_entities();
