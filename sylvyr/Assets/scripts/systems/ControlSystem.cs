@@ -21,7 +21,8 @@ public class ControlSystem : EntityProcessingSystem
 
 	protected override void process (Entity entity)
 	{
-		GOData go = go_mapper.get<GOData> (entity);
+		//GOData go = go_mapper.get<GOData> (entity);
+		GOData go = ComponentMapper.get_simple<GOData>(entity);
 		Heading h = heading_mapper.get<Heading> (entity);
 
 		bool forward = false;

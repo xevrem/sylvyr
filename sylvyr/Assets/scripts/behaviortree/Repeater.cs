@@ -1,37 +1,31 @@
 using System;
-using BehaviorLib;
-using BehaviorLib.Components;
-using BehaviorLib.Components.Composites;
-using BehaviorLib.Components.Actions;
-using BehaviorLib.Components.Conditionals;
-using BehaviorLib.Components.Decorators;
-using BehaviorLib.Components.Utility;
 
-namespace BehaviorLib.Components.Decorators
+
+public class Repeater : IBehavior
 {
-    public class Repeater : BehaviorComponent
+    private IBehavior _Behavior;
+
+	public BehaviorReturnCode ReturnCode{ get; set;}
+    
+    /// <summary>
+    /// executes the behavior every time again
+    /// </summary>
+    /// <param name="timeToWait">maximum time to wait before executing behavior</param>
+    /// <param name="behavior">behavior to run</param>
+    public Repeater(IBehavior behavior)
     {
-        private BehaviorComponent _Behavior;
-        
-        /// <summary>
-        /// executes the behavior every time again
-        /// </summary>
-        /// <param name="timeToWait">maximum time to wait before executing behavior</param>
-        /// <param name="behavior">behavior to run</param>
-        public Repeater(BehaviorComponent behavior)
-        {
-            _Behavior = behavior;
-        }
-        
-        /// <summary>
-        /// performs the given behavior
-        /// </summary>
-        /// <returns>the behaviors return code</returns>
-        public override BehaviorReturnCode Behave()
-        {
-            ReturnCode = _Behavior.Behave();
-            ReturnCode = BehaviorReturnCode.Running;
-            return BehaviorReturnCode.Running;
-        }
+        _Behavior = behavior;
+    }
+    
+    /// <summary>
+    /// performs the given behavior
+    /// </summary>
+    /// <returns>the behaviors return code</returns>
+	public BehaviorReturnCode Behave(Entity entity)
+    {
+        ReturnCode = _Behavior.Behave(entity);
+        ReturnCode = BehaviorReturnCode.Running;
+        return BehaviorReturnCode.Running;
     }
 }
+

@@ -3,54 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BehaviorLib.Components.Decorators
+public delegate float rand_func();
+
+public class RandomDecorator : IBehavior
 {
-    public class RandomDecorator : BehaviorComponent
+
+    private float _Probability;
+
+	private rand_func _RandomFunction;
+
+    private IBehavior _Behavior;
+
+	public BehaviorReturnCode ReturnCode{ get; set;}
+
+    /// <summary>
+    /// randomly executes the behavior
+    /// </summary>
+    /// <param name="probability">probability of execution</param>
+    /// <param name="randomFunction">function that determines probability to execute</param>
+    /// <param name="behavior">behavior to execute</param>
+	public RandomDecorator(float probability, rand_func randomFunction, IBehavior behavior)
     {
+        _Probability = probability;
+        _RandomFunction = randomFunction;
+        _Behavior = behavior;
+    }
 
-        private float _Probability;
 
-        private Func<float> _RandomFunction;
-
-        private BehaviorComponent _Behavior;
-
-        /// <summary>
-        /// randomly executes the behavior
-        /// </summary>
-        /// <param name="probability">probability of execution</param>
-        /// <param name="randomFunction">function that determines probability to execute</param>
-        /// <param name="behavior">behavior to execute</param>
-        public RandomDecorator(float probability, Func<float> randomFunction, BehaviorComponent behavior)
+	public BehaviorReturnCode Behave(Entity entity)
+    {
+        try
         {
-            _Probability = probability;
-            _RandomFunction = randomFunction;
-            _Behavior = behavior;
+            if (_RandomFunction() <= _Probability)
+            {
+                ReturnCode = _Behavior.Behave(entity);
+                return ReturnCode;
+            }
+            else
+            {
+                ReturnCode = BehaviorReturnCode.Running;
+                return BehaviorReturnCode.Running;
+            }
         }
-
-
-        public override BehaviorReturnCode Behave()
+        catch (Exception e)
         {
-            try
-            {
-                if (_RandomFunction.Invoke() <= _Probability)
-                {
-                    ReturnCode = _Behavior.Behave();
-                    return ReturnCode;
-                }
-                else
-                {
-                    ReturnCode = BehaviorReturnCode.Running;
-                    return BehaviorReturnCode.Running;
-                }
-            }
-            catch (Exception e)
-            {
 #if DEBUG
-                Console.Error.WriteLine(e.ToString());
+            Console.Error.WriteLine(e.ToString());
 #endif
-                ReturnCode = BehaviorReturnCode.Failure;
-                return BehaviorReturnCode.Failure;
-            }
+            ReturnCode = BehaviorReturnCode.Failure;
+            return BehaviorReturnCode.Failure;
         }
     }
 }
+

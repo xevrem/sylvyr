@@ -23,55 +23,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BehaviorLib.Components.Utility
+public delegate UtilityVector utility_vector_func();
+
+public class UtilitySelector : IBehavior
 {
-    public class UtilitySelector : BehaviorComponent
-    {
-        private UtilityPair[] _utility_pairs;
-		private Func<UtilityVector> _utility_function;
-        
-		public UtilitySelector(Func<UtilityVector> utility_function, params UtilityPair[] pairs)
-        {
-            this._utility_pairs = pairs;
-			this._utility_function = utility_function;
-        }
+    private UtilityPair[] _utility_pairs;
+	private utility_vector_func _utility_function;
+
+	public BehaviorReturnCode ReturnCode{ get; set;}
     
-        public override BehaviorReturnCode Behave()
-        {
-			try{
-				UtilityVector func_vector = this._utility_function.Invoke ();
+	public UtilitySelector(utility_vector_func utility_function, params UtilityPair[] pairs)
+    {
+        this._utility_pairs = pairs;
+		this._utility_function = utility_function;
+    }
 
-				float min = -2.0f;
-				UtilityPair best_match = null;
+	public BehaviorReturnCode Behave(Entity entity)
+    {
+		try{
+			UtilityVector func_vector = this._utility_function();
 
-				//find max pair match
-				foreach(UtilityPair pair in this._utility_pairs){ 
-					float val = func_vector.dot(pair.vector);
-					if(val > min){
-						min = val;
-						best_match = pair;
-					}
+			float min = -2.0f;
+			UtilityPair best_match = null;
+
+			//find max pair match
+			foreach(UtilityPair pair in this._utility_pairs){ 
+				float val = func_vector.dot(pair.vector);
+				if(val > min){
+					min = val;
+					best_match = pair;
 				}
+			}
 
-				//make sure we found a match
-				if(best_match == null){
-					#if DEBUG
-					Console.WriteLine("best_match not defined...");
-					#endif
-					this.ReturnCode = BehaviorReturnCode.Failure;
-					return this.ReturnCode;
-				}
-
-				//execute best pair match and return result
-				this.ReturnCode = best_match.behavior.Behave();
-				return this.ReturnCode;
-			}catch(Exception e){
+			//make sure we found a match
+			if(best_match == null){
 				#if DEBUG
-				Console.WriteLine(e.ToString());
+				Console.WriteLine("best_match not defined...");
 				#endif
 				this.ReturnCode = BehaviorReturnCode.Failure;
-				return BehaviorReturnCode.Failure;
+				return this.ReturnCode;
 			}
-        }
+
+			//execute best pair match and return result
+			this.ReturnCode = best_match.behavior.Behave(entity);
+			return this.ReturnCode;
+		}catch(Exception e){
+			#if DEBUG
+			Console.WriteLine(e.ToString());
+			#endif
+			this.ReturnCode = BehaviorReturnCode.Failure;
+			return BehaviorReturnCode.Failure;
+		}
     }
 }
+

@@ -34,7 +34,8 @@ public class World {
 		ecs_instance.add_component(e, new SpriteData ("playerShip3_blue", "character"));
 		ecs_instance.add_component (e, new GOData (position));
 		ecs_instance.add_component (e, new Heading (Vector3.up));
-		ecs_instance.add_component (e, new Follower (entity));
+		//ecs_instance.add_component (e, new Follower (entity));
+		ecs_instance.add_component(e, new Behavior(new BehaviorAction(SimpleBehaviors.follow_behavior)));
 
 		//ecs_instance.tag_manager.tag_entity ("follower", e);
 		ecs_instance.group_manager.add_entity_to_group ("ships", e);

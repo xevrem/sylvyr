@@ -9,7 +9,7 @@ public class WorldController : MonoBehaviour {
 
 	private EntitySystem sprite_system;
 	private EntitySystem control_system;
-	private EntitySystem follower_system;
+	private EntitySystem bhevior_system;
 
 	private World world;
 
@@ -34,7 +34,7 @@ public class WorldController : MonoBehaviour {
 		//setup all systems
 		sprite_system = ecs_instance.system_manager.set_system(new SpriteSystem(), new SpriteData(), new GOData());
 		control_system = ecs_instance.system_manager.set_system (new ControlSystem (), new Controllable(), new GOData (), new Heading());
-		follower_system = ecs_instance.system_manager.set_system (new FollowSystem (), new Follower (), new GOData (), new Heading ());
+		bhevior_system = ecs_instance.system_manager.set_system (new BehaviorSystem (), new Behavior ());
 
 		//initialize all systems
 		ecs_instance.system_manager.initialize_systems();
@@ -47,18 +47,10 @@ public class WorldController : MonoBehaviour {
 
 		//create any inital entities here
 		Entity player = world.create_ship();
-		for (int i = 0; i < 5000; i++) {
+		for (int i = 0; i < 1; i++) {
 			world.create_follower (new Vector3(Random.Range(-5f,5f),Random.Range(-5f,5f)), player);
 		}
 
-//		world.create_follower (new Vector3(5f,5f), player);
-//		world.create_follower (new Vector3(-5f,-5f), player);
-//		world.create_follower (new Vector3(5f,-5f), player);
-//		world.create_follower (new Vector3(1f,-5f), player);
-//		world.create_follower (new Vector3(2f,-5f), player);
-//		world.create_follower (new Vector3(5f,-1f), player);
-//		world.create_follower (new Vector3(5f,-2f), player);
-//		world.create_follower (new Vector3(5f,-3f), player);
 
 		//early entity reslove
 		ecs_instance.resolve_entities();
@@ -78,7 +70,7 @@ public class WorldController : MonoBehaviour {
 
 		//do system processing
 		control_system.process();
-		follower_system.process ();
+		bhevior_system.process ();
 
 		sprite_system.process ();
 	}

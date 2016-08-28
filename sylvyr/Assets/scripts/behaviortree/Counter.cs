@@ -5,12 +5,14 @@ using System.Text;
 
 namespace BehaviorLib.Components.Decorators
 {
-    public class Counter : BehaviorComponent
+	public class Counter : IBehavior
     {
-        private int _MaxCount;
-        private int _Counter = 0;
+		private int _max_count;
+		private int _counter = 0;
 
-        private BehaviorComponent _Behavior;
+		private IBehavior _behavior;
+
+		public BehaviorReturnCode ReturnCode{ get; set;} 
 
         /// <summary>
         /// executes the behavior based on a counter
@@ -19,30 +21,30 @@ namespace BehaviorLib.Components.Decorators
         /// </summary>
         /// <param name="maxCount">max number to count to</param>
         /// <param name="behavior">behavior to run</param>
-        public Counter(int maxCount, BehaviorComponent behavior)
+		public Counter(int maxCount, IBehavior behavior)
         {
-            _MaxCount = maxCount;
-            _Behavior = behavior;
+            _max_count = maxCount;
+            _behavior = behavior;
         }
 
         /// <summary>
         /// performs the given behavior
         /// </summary>
         /// <returns>the behaviors return code</returns>
-        public override BehaviorReturnCode Behave()
+		public  BehaviorReturnCode Behave(Entity entity)
         {
             try
             {
-                if (_Counter < _MaxCount)
+                if (_counter < _max_count)
                 {
-                    _Counter++;
+                    _counter++;
                     ReturnCode = BehaviorReturnCode.Running;
                     return BehaviorReturnCode.Running;
                 }
                 else
                 {
-                    _Counter = 0;
-                    ReturnCode = _Behavior.Behave();
+                    _counter = 0;
+                    ReturnCode = _behavior.Behave(entity);
                     return ReturnCode;
                 }
             }
