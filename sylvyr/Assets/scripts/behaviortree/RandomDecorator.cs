@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 public delegate float rand_func();
 
@@ -47,9 +48,8 @@ public class RandomDecorator : IBehavior
         }
         catch (Exception e)
         {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+			Debug.Log ("oopsie..." + e.ToString());
+
             ReturnCode = BehaviorReturnCode.Failure;
             return BehaviorReturnCode.Failure;
         }

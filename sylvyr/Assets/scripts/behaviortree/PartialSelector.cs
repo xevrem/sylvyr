@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 
 public class PartialSelector : IBehavior
 {
@@ -60,9 +60,8 @@ public class PartialSelector : IBehavior
             }
             catch (Exception e)
             {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
                 _selections++;
                 ReturnCode = BehaviorReturnCode.Failure;
                 return ReturnCode;

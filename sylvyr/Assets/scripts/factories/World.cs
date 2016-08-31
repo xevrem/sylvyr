@@ -19,7 +19,12 @@ public class World {
 		ecs_instance.add_component(e, new SpriteData ("playerShip3_red", "character"));
 		ecs_instance.add_component (e, new GOData (Vector3.zero));
 		ecs_instance.add_component (e, new Heading (Vector3.up));
+
+		//allows this entity to be controlled by player
 		ecs_instance.add_component (e, new Controllable ());
+
+		//give the player health
+		ecs_instance.add_component(e, new Health(10f));
 
 		ecs_instance.tag_manager.tag_entity ("player", e);
 		ecs_instance.group_manager.add_entity_to_group ("ships", e);
@@ -34,7 +39,8 @@ public class World {
 		ecs_instance.add_component(e, new SpriteData ("playerShip3_blue", "character"));
 		ecs_instance.add_component (e, new GOData (position));
 		ecs_instance.add_component (e, new Heading (Vector3.up));
-		//ecs_instance.add_component (e, new Follower (entity));
+		ecs_instance.add_component (e, new Target (entity));
+		//perform a very simple behavior: follow a targeted entity
 		ecs_instance.add_component(e, new Behavior(new BehaviorAction(SimpleBehaviors.follow_behavior)));
 
 		//ecs_instance.tag_manager.tag_entity ("follower", e);

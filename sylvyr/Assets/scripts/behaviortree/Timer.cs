@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 public delegate int elapsed_time_func();
 
@@ -55,9 +56,8 @@ public class Timer : IBehavior
         }
         catch (Exception e)
         {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+			Debug.Log ("oopsie..." + e.ToString());
+
             ReturnCode = BehaviorReturnCode.Failure;
             return BehaviorReturnCode.Failure;
         }

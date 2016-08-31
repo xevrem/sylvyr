@@ -1,6 +1,6 @@
 using System;
 using BehaviorLib.Components;
-
+using UnityEngine;
 
 public class StatefulSelector : IBehavior
 {
@@ -45,9 +45,8 @@ public class StatefulSelector : IBehavior
 				}
 			}
 			catch (Exception e){
-#if DEBUG
-				Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
 				continue;
 			}
 		}

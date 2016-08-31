@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+
 
 public class PartialSequence : IBehavior
 {
@@ -56,9 +58,8 @@ public class PartialSequence : IBehavior
             }
             catch (Exception e)
             {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
                 _sequence = 0;
                 ReturnCode = BehaviorReturnCode.Failure;
                 return ReturnCode;

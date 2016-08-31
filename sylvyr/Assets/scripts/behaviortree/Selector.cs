@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 public class Selector : IBehavior
 {
@@ -50,9 +51,8 @@ public class Selector : IBehavior
             }
             catch (Exception e)
             {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
                 continue;
             }
         }

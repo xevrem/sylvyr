@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace BehaviorLib.Components.Decorators
 {
@@ -50,9 +51,8 @@ namespace BehaviorLib.Components.Decorators
             }
             catch (Exception e)
             {
-#if DEBUG
-                Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
                 ReturnCode = BehaviorReturnCode.Failure;
                 return BehaviorReturnCode.Failure;
             }

@@ -1,16 +1,16 @@
 ﻿using System;
 
 
-public class Follower : IComponent
+public class Target : IComponent
 {
-	public Entity following;
+	public Entity target;
 
-	public Follower ()
+	public Target ()
 	{
 	}
 
-	public Follower(Entity entity){
-		following = entity;
+	public Target(Entity entity){
+		target = entity;
 	}
 
 	#region IComponent implementation

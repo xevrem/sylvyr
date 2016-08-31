@@ -57,9 +57,9 @@ public class UtilitySelector : IBehavior
 
 			//make sure we found a match
 			if(best_match == null){
-				#if DEBUG
+#if DEBUG
 				Console.WriteLine("best_match not defined...");
-				#endif
+#endif
 				this.ReturnCode = BehaviorReturnCode.Failure;
 				return this.ReturnCode;
 			}
@@ -68,9 +68,9 @@ public class UtilitySelector : IBehavior
 			this.ReturnCode = best_match.behavior.Behave(entity);
 			return this.ReturnCode;
 		}catch(Exception e){
-			#if DEBUG
+#if DEBUG
 			Console.WriteLine(e.ToString());
-			#endif
+#endif
 			this.ReturnCode = BehaviorReturnCode.Failure;
 			return BehaviorReturnCode.Failure;
 		}

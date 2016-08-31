@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class StatefulSequence : IBehavior
 {
@@ -45,9 +46,8 @@ public class StatefulSequence : IBehavior
 				}
 			}
 			catch (Exception e){
-#if DEBUG
-				Console.Error.WriteLine(e.ToString());
-#endif
+				Debug.Log ("oopsie..." + e.ToString());
+
 				_LastBehavior = 0;
 				ReturnCode = BehaviorReturnCode.Failure;
 				return ReturnCode;

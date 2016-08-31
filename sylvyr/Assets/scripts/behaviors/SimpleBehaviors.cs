@@ -7,11 +7,11 @@ public static class SimpleBehaviors
 	public static ECSInstance ecs_instance;
 
 	public static BehaviorReturnCode follow_behavior(Entity entity){
-		Debug.Log ("behavior called");
+		//Debug.Log ("behavior called");
 
 		GOData go = ComponentMapper.get_simple<GOData> (entity);
-		Follower f = ComponentMapper.get_simple<Follower> (entity);
-		GOData p_go = ComponentMapper.get_simple<GOData> (f.following);
+		Target f = ComponentMapper.get_simple<Target> (entity);
+		GOData p_go = ComponentMapper.get_simple<GOData> (f.target);
 
 		Heading h = ComponentMapper.get_simple<Heading> (entity);
 
@@ -33,7 +33,7 @@ public static class SimpleBehaviors
 
 		go.game_object.transform.position += h.heading * ecs_instance.delta_time * 4f;
 
-		Debug.Log ("got here...");
+		//Debug.Log ("got here...");
 
 		return BehaviorReturnCode.Success;
 	}

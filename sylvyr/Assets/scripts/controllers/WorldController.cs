@@ -9,7 +9,10 @@ public class WorldController : MonoBehaviour {
 
 	private EntitySystem sprite_system;
 	private EntitySystem control_system;
-	private EntitySystem bhevior_system;
+	private EntitySystem behavior_system;
+	private EntitySystem damage_system;
+	private EntitySystem life_system;
+
 
 	private World world;
 
@@ -29,12 +32,21 @@ public class WorldController : MonoBehaviour {
 
 		world = new World (ecs_instance);
 
+		//set appropriate ECSInstance references
+		SimpleBehaviors.ecs_instance = ecs_instance;
+		UtilFactory.ecs_instance = ecs_instance;
+
 		ResourcePool.load_all ();
 
 		//setup all systems
 		sprite_system = ecs_instance.system_manager.set_system(new SpriteSystem(), new SpriteData(), new GOData());
 		control_system = ecs_instance.system_manager.set_system (new ControlSystem (), new Controllable(), new GOData (), new Heading());
-		bhevior_system = ecs_instance.system_manager.set_system (new BehaviorSystem (), new Behavior ());
+		behavior_system = ecs_instance.system_manager.set_system (new BehaviorSystem (), new Behavior ());
+		damage_system = ecs_instance.system_manager.set_system (new DamageSystem (), new Damage ());
+		life_system = ecs_instance.system_manager.set_system (new LifeSystem (), new Health ());
+
+		//register components not explicitly tied to systems
+		ecs_instance.component_manager.register_component_type (new Target ());
 
 		//initialize all systems
 		ecs_instance.system_manager.initialize_systems();
@@ -70,7 +82,9 @@ public class WorldController : MonoBehaviour {
 
 		//do system processing
 		control_system.process();
-		bhevior_system.process ();
+		behavior_system.process ();
+		damage_system.process ();
+		life_system.process ();
 
 		sprite_system.process ();
 	}

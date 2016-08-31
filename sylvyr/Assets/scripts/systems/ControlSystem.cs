@@ -21,7 +21,7 @@ public class ControlSystem : EntityProcessingSystem
 
 	protected override void process (Entity entity)
 	{
-		//GOData go = go_mapper.get<GOData> (entity);
+		#region MOVEMENT
 		GOData go = ComponentMapper.get_simple<GOData>(entity);
 		Heading h = heading_mapper.get<Heading> (entity);
 
@@ -54,7 +54,16 @@ public class ControlSystem : EntityProcessingSystem
 		} else if (reverse) {
 			go.game_object.transform.position += h.heading * ecs_instance.delta_time * -5f;
 		}
+		#endregion
 
+		#region DAMAGE TEST
+
+		if(Input.GetKeyDown(KeyCode.D)){
+			UtilFactory.create_damage(entity, 5f);
+		}
+
+
+		#endregion
 
 			
 	}

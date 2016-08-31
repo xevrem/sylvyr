@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 public class Inverter : IBehavior
 {
@@ -45,9 +46,8 @@ public class Inverter : IBehavior
         }
         catch (Exception e)
         {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+			Debug.Log ("oopsie..." + e.ToString());
+
             ReturnCode = BehaviorReturnCode.Success;
             return ReturnCode;
         }

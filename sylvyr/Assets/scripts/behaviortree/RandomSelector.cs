@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 
 public class RandomSelector : IBehavior
@@ -10,7 +11,7 @@ public class RandomSelector : IBehavior
 	private IBehavior[] _Behaviors;
 
     //use current milliseconds to set random seed
-    private Random _Random = new Random(DateTime.Now.Millisecond);
+	//private UnityEngine.Random _Random = new UnityEngine.Random();
 
 	public BehaviorReturnCode ReturnCode{ get; set;}
 
@@ -24,6 +25,7 @@ public class RandomSelector : IBehavior
 	public RandomSelector(params IBehavior[] behaviors) 
     {
         _Behaviors = behaviors;
+
     }
 
     /// <summary>
@@ -32,11 +34,11 @@ public class RandomSelector : IBehavior
     /// <returns>the behaviors return code</returns>
 	public BehaviorReturnCode Behave(Entity entity)
     {
-        _Random = new Random(DateTime.Now.Millisecond);
-
+        //_Random = new Random(DateTime.Now.Millisecond);
+		//
         try
         {
-            switch (_Behaviors[_Random.Next(0, _Behaviors.Length)].Behave(entity))
+            switch (_Behaviors[UnityEngine.Random.Range(0, _Behaviors.Length)].Behave(entity))
             {
                 case BehaviorReturnCode.Failure:
                     ReturnCode = BehaviorReturnCode.Failure;
@@ -54,9 +56,8 @@ public class RandomSelector : IBehavior
         }
         catch (Exception e)
         {
-#if DEBUG
-            Console.Error.WriteLine(e.ToString());
-#endif
+			Debug.Log ("oopsie..." + e.ToString());
+
             ReturnCode = BehaviorReturnCode.Failure;
             return ReturnCode;
         }

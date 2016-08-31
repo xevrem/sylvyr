@@ -27,17 +27,13 @@ public class BehaviorAction : IBehavior
 			switch (_action(entity))
             {
                 case BehaviorReturnCode.Success:
-                    ReturnCode = BehaviorReturnCode.Success;
-                    return ReturnCode;
-                case BehaviorReturnCode.Failure:
-                    ReturnCode = BehaviorReturnCode.Failure;
-                    return ReturnCode;
+					return ReturnCode = BehaviorReturnCode.Success;
+                case BehaviorReturnCode.Failure:                    
+					return ReturnCode = BehaviorReturnCode.Failure;
                 case BehaviorReturnCode.Running:
-                    ReturnCode = BehaviorReturnCode.Running;
-                    return ReturnCode;
-                default:
-                    ReturnCode = BehaviorReturnCode.Failure;
-                    return ReturnCode;
+					return ReturnCode = BehaviorReturnCode.Running;
+                default:                    
+					return ReturnCode = BehaviorReturnCode.Failure;
             }
         }
         catch (Exception e)
