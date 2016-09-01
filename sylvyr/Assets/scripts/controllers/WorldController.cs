@@ -5,6 +5,8 @@ public class WorldController : MonoBehaviour {
 
 	public static WorldController instance{ get; private set; }
 
+	public QuadTree<Entity> quad_tree;
+
 	private ECSInstance ecs_instance;
 
 	private EntitySystem sprite_system;
@@ -12,9 +14,9 @@ public class WorldController : MonoBehaviour {
 	private EntitySystem behavior_system;
 	private EntitySystem damage_system;
 	private EntitySystem life_system;
+	private EntitySystem projectile_system;
 
 
-	private World world;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -30,9 +32,13 @@ public class WorldController : MonoBehaviour {
 
 		ecs_instance = new ECSInstance();
 
-		world = new World (ecs_instance);
+
+		quad_tree = new QuadTree<Entity> (new Vector2 (-10, 10), new Vector2 (10, -10));
+		quad_tree.build_quad_tree (6);
+
 
 		//set appropriate ECSInstance references
+		EntityFactory.ecs_instance = ecs_instance;
 		SimpleBehaviors.ecs_instance = ecs_instance;
 		UtilFactory.ecs_instance = ecs_instance;
 
@@ -44,9 +50,11 @@ public class WorldController : MonoBehaviour {
 		behavior_system = ecs_instance.system_manager.set_system (new BehaviorSystem (), new Behavior ());
 		damage_system = ecs_instance.system_manager.set_system (new DamageSystem (), new Damage ());
 		life_system = ecs_instance.system_manager.set_system (new LifeSystem (), new Health ());
+		projectile_system = ecs_instance.system_manager.set_system (new ProjectileSystem (), new Projectile ());
 
 		//register components not explicitly tied to systems
 		ecs_instance.component_manager.register_component_type (new Target ());
+		ecs_instance.component_manager.register_component_type (new Quadrent ());
 
 		//initialize all systems
 		ecs_instance.system_manager.initialize_systems();
@@ -58,9 +66,9 @@ public class WorldController : MonoBehaviour {
 		//=======================
 
 		//create any inital entities here
-		Entity player = world.create_ship();
-		for (int i = 0; i < 1; i++) {
-			world.create_follower (new Vector3(Random.Range(-5f,5f),Random.Range(-5f,5f)), player);
+		Entity player = EntityFactory.create_player_ship(Vector3.zero);
+		for (int i = 0; i < 100; i++) {
+			EntityFactory.create_follower (new Vector3(Random.Range(-5f,5f),Random.Range(-5f,5f)), player);
 		}
 
 
@@ -85,6 +93,7 @@ public class WorldController : MonoBehaviour {
 		behavior_system.process ();
 		damage_system.process ();
 		life_system.process ();
+		projectile_system.process ();
 
 		sprite_system.process ();
 	}

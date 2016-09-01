@@ -47,7 +47,8 @@ public class SpriteSystem : EntityProcessingSystem {
 
 	protected override void removed (Entity entity)
 	{
-		
+		GOData go_data = position_mapper.get<GOData> (entity);
+		MonoBehaviour.Destroy (go_data.game_object);
 	}
 
 	#endregion

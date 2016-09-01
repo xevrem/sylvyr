@@ -1,22 +1,22 @@
 Stuff to still do for Sylvr
 
---AI system
+x--basic AI system
 x----move the following behaviors into that AI system
-----add combat AI
-----mechanics to allow for variation
+x----add combat AI
+x----mechanics to allow for variation
 
---Projectile System
-----should limit "lifetime" of bullets
+x--Projectile System
+x----should limit "lifetime" of bullets
 
 x--Damage System
 x----requires a Health component to damage
 
 x--Health Component
-?----reviews health components then triggers a callback on 0hp?
+x----reviews health components then triggers a callback on 0hp?
 
---A way for players and enemies to shoot things
-----add to player controls
-----add to enemy AI
+x--A way for players and enemies to shoot things
+x----add to player controls
+x----add to enemy AI
 
 --Stuff in space
 ----asteroids

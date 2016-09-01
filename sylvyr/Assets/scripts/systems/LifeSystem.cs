@@ -11,8 +11,12 @@ public class LifeSystem : EntityProcessingSystem {
 		Health health = ComponentMapper.get_simple<Health> (entity);
 
 		if (health.current_hp <= 0) {
-			Debug.Log (string.Format("ENTITY {0} at 0 health!!!", entity.id));
+			//Debug.Log (string.Format("ENTITY {0} at 0 health!!!", entity.id));
 			//TODO: what do we do when we hit 0 HP? and how do we handle other entity refs?
+			//KEEL EEET!
+			health.zero_hp(entity);
+
+			return;
 		}
 
 		//perform regeneration

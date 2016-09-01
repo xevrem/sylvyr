@@ -71,8 +71,9 @@ public class ECSInstance
 
 	public void delete_entity(Entity e){
 		//TODO: add entity to a delete list
-		if (e != null)
+		if (e != null) {
 			this._deleting_entities.Enqueue (e);
+		}
 	}
 
 	public void resolve_entities(){

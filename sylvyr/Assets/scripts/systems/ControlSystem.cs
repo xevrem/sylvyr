@@ -25,6 +25,8 @@ public class ControlSystem : EntityProcessingSystem
 		GOData go = ComponentMapper.get_simple<GOData>(entity);
 		Heading h = heading_mapper.get<Heading> (entity);
 
+		//Debug.Log("char position: " + go.game_object.transform.position);
+
 		bool forward = false;
 		bool reverse = false;
 
@@ -54,14 +56,24 @@ public class ControlSystem : EntityProcessingSystem
 		} else if (reverse) {
 			go.game_object.transform.position += h.heading * ecs_instance.delta_time * -5f;
 		}
+
+		//update quadrent info
+		Quadrent quad = ComponentMapper.get_simple<Quadrent> (entity);
+		if(quad.current_node != null)
+			quad.current_node.Contents.Remove (entity);
+		quad.current_node = WorldController.instance.quad_tree.setContentAtLocation (entity, go.game_object.transform.position);
+
 		#endregion
 
 		#region DAMAGE TEST
 
-		if(Input.GetKeyDown(KeyCode.D)){
-			UtilFactory.create_damage(entity, 5f);
+		if(Input.GetKeyDown(KeyCode.P)){
+			EntityFactory.create_follower(Vector3.zero, entity);
 		}
 
+		if(Input.GetKey(KeyCode.Space)){
+			UtilFactory.create_basic_projectile(entity, go.game_object.transform.position, h.heading.normalized);
+		}
 
 		#endregion
 

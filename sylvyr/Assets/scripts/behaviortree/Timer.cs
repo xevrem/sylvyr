@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public delegate int elapsed_time_func();
+public delegate float elapsed_time_func();
 
 public class Timer : IBehavior
 {
@@ -13,9 +13,9 @@ public class Timer : IBehavior
 
     private IBehavior _Behavior;
 
-    private int _TimeElapsed = 0;
+    private float _TimeElapsed = 0;
 
-    private int _WaitTime;
+    private float _WaitTime;
 
 	public BehaviorReturnCode ReturnCode{ get; set;}
 
@@ -25,7 +25,7 @@ public class Timer : IBehavior
     /// <param name="elapsedTimeFunction">function that returns elapsed time</param>
     /// <param name="timeToWait">maximum time to wait before executing behavior</param>
     /// <param name="behavior">behavior to run</param>
-	public Timer(elapsed_time_func elapsedTimeFunction, int timeToWait, IBehavior behavior)
+	public Timer(elapsed_time_func elapsedTimeFunction, float timeToWait, IBehavior behavior)
     {
         _ElapsedTimeFunction = elapsedTimeFunction;
         _Behavior = behavior;

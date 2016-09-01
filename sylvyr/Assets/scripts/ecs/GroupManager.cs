@@ -19,7 +19,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-
+using System.Collections.Generic;
 
 public class GroupManager
 {
@@ -27,13 +27,26 @@ public class GroupManager
 	{
 	}
 
+	private Dictionary<string, List<Entity>> _groups = new Dictionary<string, List<Entity>>();
+
 	public void add_entity_to_group(string group, Entity e){
-		//TODO
+		if (_groups.ContainsKey (group) == false) {
+			_groups.Add(group, new List<Entity>());
+		}
+
+		if (_groups [group].Contains (e) == false) {
+			_groups [group].Add (e);
+		}
 	}
 
-	public Bag<Entity> get_group(string grouo){
+	public List<Entity> get_group(string group){
 		//TODO
-		return new Bag<Entity>();
+
+		if (_groups.ContainsKey (group) == true)
+			return _groups [group];
+		else
+			return null;
+			
 	}
 
 	public void refresh(Entity e){
@@ -41,7 +54,9 @@ public class GroupManager
 	}
 
 	public void delete_entity(Entity e){
-		//TODO
+		foreach (string key in _groups.Keys) {
+			_groups [key].Remove (e);
+		}
 	}
 
 	public void clean_up(){

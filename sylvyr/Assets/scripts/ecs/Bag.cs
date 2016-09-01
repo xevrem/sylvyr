@@ -19,8 +19,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using System.Collections;
 
-public class Bag<T>
+public class Bag<T> : IEnumerable, IEnumerator
 {
 	private T[] _data;
 
@@ -223,4 +224,35 @@ public class Bag<T>
 		this._data = new T[newCapacity];
 		Array.Copy(oldElements, 0, this._data, 0, oldElements.Length);
 	}
+
+	#region IEnumerable implementation
+
+	public IEnumerator GetEnumerator ()
+	{
+		return this;
+	}
+
+	#endregion
+
+	#region IEnumerator implementation
+	private int _index;
+
+	public bool MoveNext ()
+	{
+		this._index++;
+		return (_index <= this.count);
+	}
+
+	public void Reset ()
+	{
+		this._index = 0;
+	}
+
+	public object Current {
+		get {
+			return this [_index];
+		}
+	}
+
+	#endregion
 }
