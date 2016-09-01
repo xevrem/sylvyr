@@ -1,22 +1,11 @@
 Stuff to still do for Sylvr
 
-x--basic AI system
-x----move the following behaviors into that AI system
-x----add combat AI
-x----mechanics to allow for variation
+--Simple Factions
+----just a string or enum for now... string probably best
+----projectiles need to query faction so we don't hurt the same faction...
 
-x--Projectile System
-x----should limit "lifetime" of bullets
-
-x--Damage System
-x----requires a Health component to damage
-
-x--Health Component
-x----reviews health components then triggers a callback on 0hp?
-
-x--A way for players and enemies to shoot things
-x----add to player controls
-x----add to enemy AI
+--Simple Reputation
+----a way to determine if something is an ally, neutral, or hostile
 
 --Stuff in space
 ----asteroids
@@ -36,3 +25,21 @@ x----add to enemy AI
 
 --Gravity system
 ----maybe give something an attractor attribute and then have it work on a group of entities that are tagged as "attractables" or something?
+
+x--basic AI system
+x----move the following behaviors into that AI system
+x----add combat AI
+x----mechanics to allow for variation
+
+x--Projectile System
+x----should limit "lifetime" of bullets
+
+x--Damage System
+x----requires a Health component to damage
+
+x--Health Component
+x----reviews health components then triggers a callback on 0hp?
+
+x--A way for players and enemies to shoot things
+x----add to player controls
+x----add to enemy AI

@@ -1,2 +1,2 @@
 # sylvyr
-a roguelike written in unity
+a space based roguelike written in unity
