@@ -26,10 +26,14 @@ public class DamageSystem : EntityProcessingSystem {
 
 	void do_one_shot(Entity entity, Damage damage){
 		Health health = ComponentMapper.get_simple<Health> (damage.target);
+
+		//check if it can even be damaged
 		if (health == null)
 			return;
+
 		health.current_hp -= damage.damage_amount;
-		//Debug.Log (string.Format("dealt {0} damage",damage.damage_amount));
+
+		//delete the damage entity
 		ecs_instance.delete_entity (entity);
 	}
 

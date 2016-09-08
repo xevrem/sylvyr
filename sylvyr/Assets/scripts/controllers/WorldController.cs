@@ -16,7 +16,7 @@ public class WorldController : MonoBehaviour {
 	private EntitySystem life_system;
 	private EntitySystem projectile_system;
 
-
+	public Rect bounds;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -29,11 +29,13 @@ public class WorldController : MonoBehaviour {
 
 		//do all initialization here:
 		//==========================
+		bounds = new Rect(new Vector2(-10,-10),new Vector2(20,20));
 
 		ecs_instance = new ECSInstance();
 
 
 		quad_tree = new QuadTree<Entity> (new Vector2 (-10, 10), new Vector2 (10, -10));
+		//quad_tree = new QuadTree<Entity>(bounds.position, bounds.position + bounds.size);
 		quad_tree.build_quad_tree (6);
 
 
@@ -53,8 +55,11 @@ public class WorldController : MonoBehaviour {
 		projectile_system = ecs_instance.system_manager.set_system (new ProjectileSystem (), new Projectile ());
 
 		//register components not explicitly tied to systems
-		ecs_instance.component_manager.register_component_type (new Target ());
 		ecs_instance.component_manager.register_component_type (new Quadrent ());
+		ecs_instance.component_manager.register_component_type (new Target ());
+		ecs_instance.component_manager.register_component_type (new Faction ());
+		ecs_instance.component_manager.register_component_type (new Reputation ());
+		ecs_instance.component_manager.register_component_type (new FieldOfView ());
 
 		//initialize all systems
 		ecs_instance.system_manager.initialize_systems();
@@ -67,7 +72,7 @@ public class WorldController : MonoBehaviour {
 
 		//create any inital entities here
 		Entity player = EntityFactory.create_player_ship(Vector3.zero);
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 0; i++) {
 			EntityFactory.create_follower (new Vector3(Random.Range(-5f,5f),Random.Range(-5f,5f)), player);
 		}
 

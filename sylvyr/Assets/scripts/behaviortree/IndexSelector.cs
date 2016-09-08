@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public delegate int index_func();
+public delegate int index_func(Entity entity);
 
 public class IndexSelector : IBehavior
 {
@@ -34,7 +34,7 @@ public class IndexSelector : IBehavior
     {
         try
         {
-			switch (_Behaviors[_index()].Behave(entity))
+			switch (_Behaviors[_index(entity)].Behave(entity))
             {
                 case BehaviorReturnCode.Failure:
                     ReturnCode = BehaviorReturnCode.Failure;

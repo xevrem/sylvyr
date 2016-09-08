@@ -10,7 +10,7 @@ public class ProjectileSystem : EntityProcessingSystem {
 		Heading heading = ComponentMapper.get_simple<Heading>(entity);
 
 		//set the initial rotation correctly
-		float angle = (VectorHelper.getSignedAngle (heading.heading, Vector3.up) / (2f*Mathf.PI)) * 360f;
+		float angle = (VectorHelper.get_signed_angle (heading.heading, Vector3.up) / (2f*Mathf.PI)) * 360f;
 		go.game_object.transform.Rotate (Vector3.forward, -angle);
 	}
 
@@ -41,6 +41,19 @@ public class ProjectileSystem : EntityProcessingSystem {
 				
 				if (Vector3.Distance (ship_go.game_object.transform.position, proj_go.game_object.transform.position) < 0.5f) {
 					//we hit it... so i guess we should do something...
+
+					//check to make sure that the factions dont match i.e., no friendly fire
+					Faction o_fac = ComponentMapper.get_simple<Faction>(projectile.creator); 
+					if (o_fac == null)
+						continue;
+
+					Faction s_fac = ComponentMapper.get_simple<Faction>(ship);
+					if (s_fac == null)
+						continue;
+
+					if (o_fac.faction == s_fac.faction)
+						continue;
+
 					//TODO: do something...
 					projectile.hit(ship);
 

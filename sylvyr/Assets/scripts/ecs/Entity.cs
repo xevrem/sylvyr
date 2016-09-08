@@ -22,7 +22,7 @@ using System;
 
 public class Entity
 {
-	public int id;
+	public int id = -1;
 
 	public Entity (){
 	}

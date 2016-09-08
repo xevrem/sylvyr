@@ -25,7 +25,7 @@ public static class VectorHelper
 {
 
 
-    public static float getAngle(Vector2 a, Vector2 b)
+    public static float get_angle(Vector2 a, Vector2 b)
     {
         Vector2 ta = a;
         Vector2 tb = b;
@@ -42,7 +42,7 @@ public static class VectorHelper
             return 6.283f - (float)Math.Acos(dot);
     }
 
-    public static float getAngle2(Vector2 a, Vector2 b)
+    public static float get_angle_2(Vector2 a, Vector2 b)
     {
         Vector2 ta = a;
         Vector2 tb = b;
@@ -57,20 +57,24 @@ public static class VectorHelper
 
     }
 
-    public static float getSignedAngle(Vector2 a, Vector2 b)
+    public static float get_signed_angle(Vector2 a, Vector2 b)
     {
         float perDot = a.x * b.y - a.y * b.x;
         return (float)Math.Atan2(perDot, Vector2.Dot(a, b));
     }
 
-    public static Vector2 rotateVectorRadians(Vector2 vector, float angleRadians)
+	public static float get_signed_angle_degrees(Vector2 a, Vector2 b){
+		return get_signed_angle (a, b) * ((2f * Mathf.PI) / 360f);
+	}
+
+    public static Vector2 rotate_vector_radians(Vector2 vector, float angleRadians)
     {
         float x = vector.x * Mathf.Cos(angleRadians) - vector.y * Mathf.Sin(angleRadians);
         float y = vector.x * Mathf.Sin(angleRadians) + vector.y * Mathf.Cos(angleRadians);
         return new Vector2(x, y);
     }
 
-    public static Vector2 rotateVectorDegrees(Vector2 vector, float angleDegrees)
+    public static Vector2 roate_vector_degrees(Vector2 vector, float angleDegrees)
     {
         float angle = ((2f * Mathf.PI) / 360f) * angleDegrees;
 
@@ -138,5 +142,14 @@ public static class VectorHelper
         //return Math.Abs(Vector2.Dot(vector, axis));
 		return ((Vector2.Dot(vector, axis) / axis.sqrMagnitude) * axis).magnitude;
     }
+
+	/// <summary>
+	/// Reflect the specified vector v off of n.
+	/// </summary>
+	/// <param name="v">incident vector</param>
+	/// <param name="n">normal to reflect off</param>
+//	public static Vector2 reflect(Vector2 v, Vector2 n){
+//	
+//	}
 }
 

@@ -7,6 +7,8 @@ public class ControlSystem : EntityProcessingSystem
 	private ComponentMapper go_mapper;
 	private ComponentMapper heading_mapper;
 
+	private IBehavior simepl_shoot_behavior = SimpleBehaviors.time_to_shoot(0.1f);
+
 	public ControlSystem ()
 	{
 	}
@@ -43,12 +45,12 @@ public class ControlSystem : EntityProcessingSystem
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			//perform a rotate, note: you may just want to turn in place, hence no forward/reverse setting
 			go.game_object.transform.Rotate (Vector3.forward, turn_rate);
-			h.heading = VectorHelper.rotateVectorDegrees (h.heading, turn_rate).normalized;
+			h.heading = VectorHelper.roate_vector_degrees (h.heading, turn_rate).normalized;
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			//perform a rotate, note: you may just want to turn in place, hence no forward/reverse setting
 			go.game_object.transform.Rotate (Vector3.forward, -turn_rate);
-			h.heading = VectorHelper.rotateVectorDegrees (h.heading, -turn_rate).normalized;
+			h.heading = VectorHelper.roate_vector_degrees (h.heading, -turn_rate).normalized;
 		}
 
 		if (forward) {
@@ -72,7 +74,8 @@ public class ControlSystem : EntityProcessingSystem
 		}
 
 		if(Input.GetKey(KeyCode.Space)){
-			UtilFactory.create_basic_projectile(entity, go.game_object.transform.position, h.heading.normalized);
+			//UtilFactory.create_basic_projectile(entity, go.game_object.transform.position, h.heading.normalized);
+			simepl_shoot_behavior.Behave(entity);
 		}
 
 		#endregion
