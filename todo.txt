@@ -1,17 +1,17 @@
 Stuff to still do for Sylvr
 
---Simple Factions
-----just a string or enum for now... string probably best
-----projectiles need to query faction so we don't hurt the same faction...
+x--Simple Factions
+x----just a string or enum for now... string probably best
+x----projectiles need to query faction so we don't hurt the same faction...
 
---Simple Reputation
-----a way to determine if something is an ally, neutral, or hostile
+x--Simple Reputation
+x----a way to determine if something is an ally, neutral, or hostile
 
 --Stuff in space
 ----asteroids
 ------should they be static or move or orbit?
 ----friendly ships
-------simple wanderer AI at beginning
+x------simple wanderer AI at beginning
 ------goal AI later?
 ----space stations
 ------trade and stuff...
