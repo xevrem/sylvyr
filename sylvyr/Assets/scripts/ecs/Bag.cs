@@ -57,6 +57,8 @@ public class Bag<T> : IEnumerable, IEnumerator
 	{
 		get
 		{
+			if (index >= this._data.Length)
+				return default(T);
 			return (T)this._data [index];
 		}
 
@@ -126,6 +128,8 @@ public class Bag<T> : IEnumerable, IEnumerator
 
 	public T get(int index)
 	{
+		if (index >= this._data.Length)
+			return default(T);
 		return this._data[index];
 	}
 
@@ -214,7 +218,7 @@ public class Bag<T> : IEnumerable, IEnumerator
 
 	private void grow()
 	{
-		this.grow((int)(this._data.Length * 1.5) + 1);
+		this.grow(this._data.Length * 2);
 	}
 
 
@@ -235,12 +239,12 @@ public class Bag<T> : IEnumerable, IEnumerator
 	#endregion
 
 	#region IEnumerator implementation
-	private int _index;
+	private int _index = 0;
 
 	public bool MoveNext ()
 	{
 		this._index++;
-		return (_index <= this.count);
+		return (_index < this.count);
 	}
 
 	public void Reset ()
@@ -250,7 +254,7 @@ public class Bag<T> : IEnumerable, IEnumerator
 
 	public object Current {
 		get {
-			return this [_index];
+			return this [this._index];
 		}
 	}
 

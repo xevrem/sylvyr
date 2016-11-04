@@ -155,10 +155,14 @@ public static class SimpleBehaviors
 
 		if (h == null)
 			return BehaviorReturnCode.Failure;
-		
-		//reverse heading add choose a random degree of alteration
-		h.heading = VectorHelper.roate_vector_degrees(h.heading * -1f, UnityEngine.Random.Range(-20,20));
 
+		//reverse heading add choose a random degree of alteration
+		Vector2 newvec = VectorHelper.roate_vector_degrees(h.heading * -1f, UnityEngine.Random.Range(-45,45));
+
+		GOData go = ComponentMapper.get_simple<GOData> (entity);
+		go.game_object.transform.position -= h.heading * ecs_instance.delta_time * 4f;
+
+		h.heading = newvec;
 		//Debug.Log ("reversing?");
 
 		return BehaviorReturnCode.Success;
@@ -211,7 +215,7 @@ public static class SimpleBehaviors
 				continue;
 
 			if (rep.reputations [faction.faction] < 0.5f) {
-				Debug.Log ("setting faction...");
+				//Debug.Log ("setting faction...");
 
 				//set it to this entities target
 				ecs_instance.add_component(entity, new Target(e));
